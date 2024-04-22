@@ -5,9 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
-   
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
-<body class="tablet:mx-[60px] ">
+<body class="tablet:mx-[60px] bg-[#FAFAFA] font-poppins overflow-x-hidden">
 
 <!-- Header -->
 <header class="flex justify-between py-4 items-end">
@@ -18,106 +20,97 @@
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-[25px] h-[25px]">
             <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
         </svg>
-        <span class="ml-2 font-inter">Menu</span>
+        <span class="ml-2">Menu</span>
     </div>
-    <div class="max-tablet:hidden grid grid-cols-4 gap-x-2 font-dmsans font-bold text-black text-[14px] m-2">
+    <div class="max-tablet:hidden grid grid-cols-4 gap-x-2 font-bold text-black text-[14px] m-2">
         <button class="shadow-xl rounded-xl px-4 py-2">ABOUT</button>
         <button class="shadow-xl rounded-xl px-4 py-2">WORK</button>
         <button class="shadow-xl rounded-xl px-4 py-2">CONTACT</button>
         <button class="shadow-xl rounded-xl px-4 py-2">BLOG</button>
-
     </div>
 </header>
 
-<div class="border-t border-orange-600 w-screen "></div>
+<div class="border-t border-orange-600 mx-2"></div>
 
-<div class="h-auto w-full mt-[8px] ml-[12px]   text-left z-20">
-    <h1 class=" animate-appear font-semibold font-poppins text-black-900 text-[28px] tablet:text-[100px]   mr-[25px]">
+<div class="h-auto w-full mt-[8px] ml-[12px] text-left z-20">
+    <h1 class="animate-appear font-semibold text-black-900 text-[28px] tablet:text-[100px] mr-[25px]">
         CRAFT. DEVELOP. ANALYZE.
     </h1>
 </div>
-    <div class="tablet:flex ">
-    <p class="tablet:w-2/3  font-100 font-poppins font-medium text-black-900 text-[16px] tablet:text-[36px] ml-3  mr-[25px] mt-[6px] ">
-        Sauf Digital Goes Beyond Design, Using Data to Craft 
-         User Experiences That Realize Your Vision. 
-       to Turn Your Ideas Into Groundbreaking Realities.
-     </p>
-     <div class="max-tablet:grid grid-cols-4">
-        <div class="tablet:hidden col-span-2  "></div>
-        <img src="../assets/Sticker 5.png" alt="" 
-        class="max-tablet:col-span-2 mx-2 right-0 tablet:h-[333px]">
-    </div>
-</div>
-<div>
-    <button class="flex justify-between items-center w-5/6 h-auto bg-black font-dmsans font-bold text-white m-[12px]  text-[24px] text-left pl-[26px] rounded-md ">
-        LETS TALK
-        <div class="h-[50px] w-[52px] bg-sauforange rounded-sm m-[10px] flex justify-center">
-            <img src="../assets/Full.png" alt="" class="relative top-1.5 w-[38px] h-[39px]">
+
+<div class="tablet:flex flex-initial">
+    <div class="w-full">
+        <p class=" font-100  font-light  text-black text-[16px] tablet:text-[36px] ml-3 mt-[6px]">
+            Sauf Digital Goes Beyond Design, Using Data to Craft 
+            User Experiences That Realize Your Vision. 
+            to Turn Your Ideas Into Groundbreaking Realities.
+        </p>
+        <div>
+            <button class="flex justify-between items-center w-5/6 h-auto bg-black font-bold text-white mt-[16px] text-[24px] text-left pl-[26px] rounded-md">
+                LET'S TALK
+                <div class="h-[50px] w-[52px] bg-sauforange rounded-sm m-[10px] flex justify-center">
+                    <img src="../assets/Full.png" alt="" class="relative top-1.5 w-[38px] h-[39px]">
+                </div>
+            </button>
         </div>
-    </button>
+    </div>
+        <div class="max-tablet:grid grid-cols-4 w-2/5 ">
+            <div class="tablet:hidden col-span-2"></div>
+            <img src="../assets/Sticker 5.png" alt="" class="max-tablet:col-span-2 w-full right-0 ">
+        </div>
+    
 </div>
-<div class="w-screen animate-infinite-scroll mt-[42px]  ">
-    <ul class="flex items-center justify-center md:justify-start [&_li]:mx-[50px] font-poppins text-[24px] tablet:text-[48px] font-bold text-black italic text-nowrap whitespace-nowrap ">
-        <li>
-            BRAND GUIDELINES
-        </li>
-        <li>
-            VISUAL IDENTITY
-        </li>
-        <li>
-            FRONT-END DEVELOPMENT
-        </li>
-        <li>
-            WEB DEVELOPMENT
-        </li>
-        <li>
-            USER RESEARCH
-        </li>
-        <li>
-            USABILTY TESTING
-        </li>
-        <li>
-            RESPONSIVE DESIGN
-        </li>
-        <li>
-            WEB PERFORMANCE OPTIMIZATION
-        </li>
-    </ul>                
-</div>
-<div class="font-dmsans text-[20px] font-bold m-2 mt-[25px]">
-    FEATURED PROJECTS
+<div class="border-t border-orange-600 mx-2 mt-[16px]"></div>
+
+<div class=" text-[20px] font-bold m-2 mt-[25px] tablet:text-[64px] tablet:mt-[48px] ">
+    OUR PROJECTS
 </div>
 
-<div class="grid tablet:grid-cols-2 m-2 mt-[14px] font-dmsans gap-x-2 gap-y-4">
-    <div class="bg-gradient-to-b from-[#4255FF] to-[#0013BA]  h-fit rounded-md">
+<div class="grid tablet:grid-cols-2 m-2 mt-[14px]  gap-x-2 gap-y-4">
+    <div class="bg-gradient-to-b from-[#EEEEEE] to-[#F4F4F4] h-fit rounded-md border border-2 ">
         <img src="../assets/drivermate (2).png" alt="" class="relative m-auto h-5/6 w-full px-2 pt-2">
-        <div class="text-white m-2">
-           <h1 class="font-bold text-[16px]  ">DriverMate</h1>
-            <p class="font-thin text-[16px] mt-[6px]">DriverMate is a comprehensive app used for managing driver attendance and notices, as well as scheduling and routing for bus fleets.</p>
+        <div class="text-black m-2">
+            <h1 class="font-bold text-[16px] tablet:text-[24px]">DriverMate</h1>
+            <p class="font-light text-[16px] mt-[6px] tablet:text-[24px]">DriverMate is a comprehensive app used for managing driver attendance and notices, as well as scheduling and routing for bus fleets.</p>
         </div>
     </div>
-    <div class="bg-gradient-to-b from-[#F36C25] to-[#D74A00]  h-fit rounded-md">
+    <div class="bg-gradient-to-b from-[#EEEEEE] to-[#F4F4F4] h-fit rounded-md border border-2 ">
         <img src="../assets/365paws.png" alt="" class="relative m-auto h-5/6 w-full px-2 pt-2">
-        <div class="text-white m-2">
-           <h1 class="font-bold text-[16px] ">365 PAWS</h1>
-            <p class="font-thin text-[16px] mt-[6px]">“DriverMate” is a comprehensive app used for managing driver attendance and notices, as well as scheduling and routing for bus fleets.</p>
+        <div class="text-black m-2">
+            <h1 class="font-bold text-[16px] tablet:text-[24px]">365 PAWS</h1>
+            <p class="font-light text-[16px] mt-[6px] tablet:text-[24px]">“DriverMate” is a comprehensive app used for managing driver attendance and notices, as well as scheduling and routing for bus fleets.</p>
         </div>
     </div>
-    <div class="bg-gradient-to-b from-[#217344] to-[#6BBB8F]  h-fit rounded-md">
+    <div class="bg-gradient-to-b from-[#EEEEEE] to-[#F4F4F4] h-fit rounded-md border border-2 ">
         <img src="../assets/fabrico.png" alt="" class="relative m-auto h-5/6 w-full px-2 pt-2">
-        <div class="text-white m-2">
-           <h1 class="font-bold text-[16px]">FABRICO</h1>
-            <p class="font-thin text-[16px] mt-[6px]">“DriverMate” is a comprehensive app used for managing driver attendance and notices, as well as scheduling and routing for bus fleets.</p>
+        <div class="text-black m-2">
+            <h1 class="font-bold text-[16px] tablet:text-[24px]">FABRICO</h1>
+            <p class="font-light text-[16px] mt-[6px] tablet:text-[24px]">“DriverMate” is a comprehensive app used for managing driver attendance and notices, as well as scheduling and routing for bus fleets.</p>
         </div>
     </div>
-    <div class="bg-gradient-to-b from-[#000000] to-[#848484]  h-fit rounded-md">
+    <div class="bg-gradient-to-b from-[#EEEEEE] to-[#F4F4F4] h-fit rounded-md border border-2 ">
         <img src="../assets/pneutech rosseau.png" alt="" class="relative m-auto h-5/6 w-full px-2 pt-2">
-        <div class="text-white m-2">
-           <h1 class="font-bold text-[16px]">PNEUTECH ROSSEAU</h1>
-            <p class="font-thin text-[16px] mt-[6px]">“DriverMate” is a comprehensive app used for managing driver attendance and notices, as well as scheduling and routing for bus fleets.</p>
+        <div class="text-black m-2">
+            <h1 class="font-bold text-[16px] tablet:text-[24px]">PNEUTECH ROSSEAU</h1>
+            <p class="font-light text-[16px] mt-[6px] tablet:text-[24px]">“DriverMate” is a comprehensive app used for managing driver attendance and notices, as well as scheduling and routing for bus fleets.</p>
+        </div>
+    </div>  
+</div>
+<div class="mt-[56px] grid grid-cols-3 gap-x-16 items-center">
+    <div class="tablet:text-[64px] font-bold">HEAR IT FROM WHAT OUR CLIENTS SAY</div>
+    <div class="col-span-2">
+        <div class="relative m-auto h-[600px] w-5/6 content-between	 bg-[#FEFEFE] rounded-lg">
+            <p class="p-[55px]  text-[32px]">Saadatullah was fantastic to work with. He was easy to communicate with and his work was quick and high quality. He was also very flexible with the revisions we asked for. I will definitely work with him again in the future.</p>
+            <div class="ml-[55px] flex items-center gap-4">
+                <div class="font-medium text-white rounded-full bg-[#7DB0FE] flex items-center justify-center " style="height: 90px; width: 90px; font-size: 36px;">SC</div>
+                <div>
+                    <div class="font-bold text-[24px] tablet:text-[24px]">SAN CLEMENTE</div>
+                    <div class="font-light text-[20px] tablet:text-[24px]">UPWORK CLIENT</div>
+                </div>
+                
+            </div>
         </div>
     </div>
-
 </div>
 </body>
 </html>
