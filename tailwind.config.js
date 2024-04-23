@@ -10,9 +10,22 @@ module.exports = {
         'infinite-scroll': 'infinite-scroll 25s linear infinite',
         "typing": "typing 2s steps(10)", 
         "appear" : "fade-up once ease-linear",
-        "tilt" : "tilt 2s infinite"
+        "tilt" : "tilt 2s infinite",
+        "liquid-fill" : "liquid-fill 2s infinite"
       },
       keyframes:{
+        "liquid-fill":{
+            "0%" :{
+                "background-color": "#4CAF50"
+            },
+            "50%" :{
+              "background-color": "#4CAF50"
+            },
+            "100%": {
+              "background-color": "#4CAF50"
+            },
+        }
+        ,
         'infinite-scroll': {
           from: { transform: 'translateX(0)' },
           to: { transform: 'translateX(-100%)' },
