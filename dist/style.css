@@ -564,6 +564,10 @@ video {
   z-index: 20;
 }
 
+.col-span-1 {
+  grid-column: span 1 / span 1;
+}
+
 .col-span-2 {
   grid-column: span 2 / span 2;
 }
@@ -574,6 +578,10 @@ video {
 
 .col-span-4 {
   grid-column: span 4 / span 4;
+}
+
+.col-span-5 {
+  grid-column: span 5 / span 5;
 }
 
 .col-span-7 {
@@ -650,6 +658,14 @@ video {
 
 .ms-1 {
   margin-inline-start: 0.25rem;
+}
+
+.mt-2 {
+  margin-top: 0.5rem;
+}
+
+.mt-4 {
+  margin-top: 1rem;
 }
 
 .mt-\[14px\] {
@@ -753,6 +769,10 @@ video {
   max-height: 498px;
 }
 
+.w-24 {
+  width: 6rem;
+}
+
 .w-4 {
   width: 1rem;
 }
@@ -789,6 +809,10 @@ video {
   width: 100%;
 }
 
+.w-screen {
+  width: 100vw;
+}
+
 .flex-shrink-0 {
   flex-shrink: 0;
 }
@@ -797,8 +821,8 @@ video {
   animation: fade-up once ease-linear;
 }
 
-.grid-cols-10 {
-  grid-template-columns: repeat(10, minmax(0, 1fr));
+.grid-cols-11 {
+  grid-template-columns: repeat(11, minmax(0, 1fr));
 }
 
 .grid-cols-2 {
@@ -996,6 +1020,10 @@ video {
   font-family: 'Poppins' , sans-serif;
 }
 
+.text-\[12px\] {
+  font-size: 12px;
+}
+
 .text-\[14px\] {
   font-size: 14px;
 }
@@ -1016,13 +1044,9 @@ video {
   font-size: 32px;
 }
 
-.text-xs {
-  font-size: 0.75rem;
-  line-height: 1rem;
-}
-
-.text-\[12px\] {
-  font-size: 12px;
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
 }
 
 .font-bold {
@@ -1185,10 +1209,6 @@ video {
     grid-column: span 2 / span 2;
   }
 
-  .max-tablet\:mt-12 {
-    margin-top: 3rem;
-  }
-
   .max-tablet\:mt-4 {
     margin-top: 1rem;
   }
@@ -1236,6 +1256,10 @@ video {
     width: 173.72px;
   }
 
+  .tablet\:grid-cols-10 {
+    grid-template-columns: repeat(10, minmax(0, 1fr));
+  }
+
   .tablet\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -1244,8 +1268,8 @@ video {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
-  .tablet\:grid-cols-10 {
-    grid-template-columns: repeat(10, minmax(0, 1fr));
+  .tablet\:text-\[16px\] {
+    font-size: 16px;
   }
 
   .tablet\:text-\[20px\] {
@@ -1270,10 +1294,6 @@ video {
 
   .tablet\:text-\[64px\] {
     font-size: 64px;
-  }
-
-  .tablet\:text-\[16px\] {
-    font-size: 16px;
   }
 }
   
