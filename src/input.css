@@ -36,9 +36,10 @@
     content: "";
     background: linear-gradient(
       45deg,
-      #ff0000,
-      #e98550,
+      #f36c25,
+      #fdb72c,
       #bb2828
+      
     );
     position: absolute;
     top: -2px;

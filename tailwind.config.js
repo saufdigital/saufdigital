@@ -10,6 +10,7 @@ module.exports = {
         dmsans : "'DM Sans' , sans-serif"
       },
       animation:{
+        slidein: "slidein 1s ease 300ms;",
         'infinite-scroll': 'infinite-scroll 25s linear infinite',
         "typing": "typing 2s steps(10)", 
         "appear" : "fade-up once ease-linear",
@@ -33,7 +34,16 @@ module.exports = {
           from: { transform: 'translateX(0)' },
           to: { transform: 'translateX(-100%)' },
         },
-        
+        slidein: {
+          from: {
+            opacity: "0",
+            transform: "translateY(-10px)",
+          },
+          to: {
+            opacity: "1",
+            transform: "translateY(0)",
+          },
+        },
         "typing": {
           "0%": {
             "font-weight": "light"
