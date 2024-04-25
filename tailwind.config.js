@@ -1,10 +1,13 @@
 /** @type {import('tailwindcss').Config} */
+
+
 module.exports = {
   content: ["./dist/*.{html,js}"],
   theme: {
     extend: {
       fontFamily:{
-        poppins : "'Poppins' , sans-serif"
+        poppins : "'Poppins' , sans-serif",
+        dmsans : "'DM Sans' , sans-serif"
       },
       animation:{
         'infinite-scroll': 'infinite-scroll 25s linear infinite',
@@ -30,6 +33,7 @@ module.exports = {
           from: { transform: 'translateX(0)' },
           to: { transform: 'translateX(-100%)' },
         },
+        
         "typing": {
           "0%": {
             "font-weight": "light"
@@ -62,7 +66,7 @@ module.exports = {
     
     screens :{
       "mobile" : '320px',
-      "tablet" : '640px',
+      "tablet" : '770px',
       "laptop" : '1024px'
     },
   
