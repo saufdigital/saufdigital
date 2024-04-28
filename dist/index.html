@@ -10,13 +10,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="icon" href="../assets//saufdigitallogo.png" type="image/icon type">
 
 </head>
 
 <body class=" tablet:mx-[60px] font-poppins bg-[#FEFFEA] overflow-x-hidden">
     
-    <header class="flex justify-between py-4 items-end items-center">
-        <div class="w-[104px] h-[40px] ml-[12px] tablet:w-[173.72px] h-[56.49px]  pt-2">
+    <header class="flex justify-between py-4 items-end items-center mt-4">
+        <div class="w-[104px] h-[40px] ml-[12px] tablet:w-[173.72px] h-[56.49px] ">
             <img src="../assets/saufdigitallogo.png" alt="">
         </div>
         <div class="tablet:hidden flex mr-[16px] text-[16px] font-semibold items-center relative h-[40px] pt-2 " id="menuButton">
@@ -25,11 +26,11 @@
             </svg>
             <span class="ml-2">Menu</span>
         </div>
-        <div class="max-tablet:hidden grid grid-cols-4 gap-x-2 font-bold text-black text-[14px] m-2">
-            <button class="shadow-xl rounded-xl px-4 py-2">ABOUT</button>
-            <button class="shadow-xl rounded-xl px-4 py-2">WORK</button>
-            <button class="shadow-xl rounded-xl px-4 py-2">CONTACT</button>
-            <button class="shadow-xl rounded-xl px-4 py-2">BLOG</button>
+        <div class="relative max-tablet:hidden grid grid-cols-4 gap-x-4 font-bold top-4">
+            <button class="navbutton" >About</button>
+            <button class="navbutton">Work</button>
+            <button class="navbutton ">Contact</button>
+            <button class="navbutton ">Blog</button>
         </div>
     </header>
     <div id="dialogBox" class="hidden z-50	fixed  w-screen h-screen justify-center items-center backdrop-filter backdrop-blur-lg ">
@@ -168,8 +169,13 @@
                     <h1 class="col-span-3 font-bold text-[16px] tablet:text-[40px]">DriverMate</h1>
                     <p class="col-span-4 text-[12px] tablet:text-[16px] mt-[6px] ml-[24px] ">DriverMate is a comprehensive app used for managing driver attendance and notices, as well as scheduling and routing for bus fleets.</p>
                     <div class="max-tablet:mt-4 col-span-7 tablet:col-span-3 text-[16px] flex flex-col items-center">
-                        <button class=" text-[12px] tablet:text-[16px] mx-auto bg-white px-[25px] py-[10px] rounded-[50px] shadow-md">SHOW PROJECT</button>
-                    </div>
+                        <a href="#_" class="relative inline-flex items-center px-12 py-3 overflow-hidden text-[14px] font-medium text-sauforange border-2 border-sauforange rounded-full hover:text-white group hover:bg-gray-50">
+                            <span class="absolute left-0 block w-full h-0 transition-all bg-sauforange opacity-100 group-hover:h-full top-1/2 group-hover:top-0 duration-400 ease"></span>
+                            <span class="absolute right-0 flex items-center justify-start w-10 h-10 duration-300 transform translate-x-full group-hover:translate-x-0 ease">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                            </span>
+                            <span class="relative">Show Project</span>
+                            </a>                    </div>
                 </div>
                 
         </li>
@@ -181,8 +187,13 @@
                 <h1 class="col-span-3 font-bold text-[16px] tablet:text-[40px]">DriverMate</h1>
                 <p class="col-span-4 text-[12px] tablet:text-[16px] mt-[6px] ml-[24px] ">DriverMate is a comprehensive app used for managing driver attendance and notices, as well as scheduling and routing for bus fleets.</p>
                 <div class="max-tablet:mt-4 col-span-7 tablet:col-span-3 text-[16px] flex flex-col items-center">
-                    <button class=" text-[12px] tablet:text-[16px] mx-auto bg-white px-[25px] py-[10px] rounded-[50px] shadow-md">SHOW PROJECT</button>
-                </div>
+                    <a href="#_" class="relative inline-flex items-center px-12 py-3 overflow-hidden text-[14px] font-medium text-sauforange border-2 border-sauforange rounded-full hover:text-white group hover:bg-gray-50">
+                        <span class="absolute left-0 block w-full h-0 transition-all bg-sauforange opacity-100 group-hover:h-full top-1/2 group-hover:top-0 duration-400 ease"></span>
+                        <span class="absolute right-0 flex items-center justify-start w-10 h-10 duration-300 transform translate-x-full group-hover:translate-x-0 ease">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                        </span>
+                        <span class="relative">Show Project</span>
+                        </a>                </div>
             </div>
             
     </li>
@@ -194,8 +205,13 @@
             <h1 class="col-span-3 font-bold text-[16px] tablet:text-[40px]">Fabric</h1>
             <p class="col-span-4 text-[12px] tablet:text-[16px] mt-[6px] ml-[24px] ">DriverMate is a comprehensive app used for managing driver attendance and notices, as well as scheduling and routing for bus fleets.</p>
             <div class="max-tablet:mt-4 col-span-7 tablet:col-span-3 text-[16px] flex flex-col items-center">
-                <button class=" text-[12px] tablet:text-[16px] mx-auto bg-white px-[25px] py-[10px] rounded-[50px] shadow-md">SHOW PROJECT</button>
-            </div>
+                <a href="#_" class="relative inline-flex items-center px-12 py-3 overflow-hidden text-[14px] font-medium text-sauforange border-2 border-sauforange rounded-full hover:text-white group hover:bg-gray-50">
+                    <span class="absolute left-0 block w-full h-0 transition-all bg-sauforange opacity-100 group-hover:h-full top-1/2 group-hover:top-0 duration-400 ease"></span>
+                    <span class="absolute right-0 flex items-center justify-start w-10 h-10 duration-300 transform translate-x-full group-hover:translate-x-0 ease">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                    </span>
+                    <span class="relative">Show Project</span>
+                    </a>            </div>
         </div>
         
 </li>
@@ -248,49 +264,53 @@
             </div>
         </div>
     </div> -->
-    <div class="-mx-4 tablet:-mx-16 mt-[80px] bg-gradient-to-r from-[#f36c25] via-[#fdb72c] to-[#bb2828] p-4 tablet:p-12 tablet:rounded-tl-[100px] rounded-tl-[30px] rounded-tr-[100px] rounded-b-[30px]">
-    <div class="border border-2 tablet:grid grid-cols-5 mx-2 tablet:mx-0 my-[32px] bg-white rounded-tl-[30px] rounded-tr-[100px] rounded-b-lg">
+    <div class="-mx-4 tablet:-mx-16 mt-[80px] bg-gradient-to-r from-[#f36c25] via-[#fdb72c] to-[#bb2828] p-4 tablet:p-12 tablet:rounded-tl-[30px] rounded-tl-[30px] tablet:rounded-tr-[30px] rounded-b-[30px]">
+    <div class="px-4 border border-2 tablet:grid grid-cols-6 mx-2 tablet:mx-16 my-[32px] bg-white rounded-tl-[30px] rounded-tr-[100px] rounded-b-[30px] ">
         <div class="tablet:col-span-3">
-            <h1 class=" tablet:text-[36px] font-semibold m-[32px] ">Ready to discuss
+            <h1 class=" tablet:text-[36px] font-semibold m-[32px] leading-tight">Ready to discuss
                 your project with us?</h1>
             <form class="m-[32px]" action="">
                 <div class="tablet:grid grid-cols-2 gap-4">
                 <div>
                 <label class="font-semibold text-[16px]">Name</label>
-                <input type="text" class="my-4 w-full border border-2 border-[#EEEEEE] bg-white p-4 rounded-lg" placeholder="Jane">
+                <input type="text" class="text-[14px] my-4 w-full border border-2 border-[#EEEEEE] bg-white p-2 rounded-lg" placeholder="Jane">
                 </div>
                 <div>
                     <label class="font-semibold text-[16px]">Email</label>
-                    <input type="email" class="my-4 w-full border border-2 border-[#EEEEEE] bg-white p-4 rounded-lg" placeholder="Jane@work.com">
+                    <input type="email" class="text-[14px] my-4 w-full border border-2 border-[#EEEEEE] bg-white p-2 rounded-lg" placeholder="Jane@work.com">
                 </div>
                 </div>
                     <div class="mt-[28px]">
                     <label class="font-semibold text-[16px]">Tell us About your project</label>
-                    <textarea type="text"  rows="4" class="my-4 w-full border border-2 border-[#EEEEEE] bg-white p-4 rounded-lg" placeholder="I would like to take my website to next level 🚀"></textarea>
+                    <textarea type="text"  rows="2" class="text-[14px] my-4 w-full border border-2 border-[#EEEEEE] bg-white p-4 rounded-lg" placeholder="I would like to take my website to next level 🚀"></textarea>
                     </div>
-                    <div class="font-bold text-black text-[16px] m-2 mt-[14px]">
-                        <button class="shadow-xl rounded-xl px-4 py-2">Send Message</button>
-                    </div>
+                    <a href="#_" class="relative inline-flex items-center px-12 py-3 overflow-hidden text-[14px] font-medium text-sauforange border-2 border-sauforange rounded-full hover:text-white group hover:bg-gray-50">
+                    <span class="absolute left-0 block w-full h-0 transition-all bg-sauforange opacity-100 group-hover:h-full top-1/2 group-hover:top-0 duration-400 ease"></span>
+                    <span class="absolute right-0 flex items-center justify-start w-10 h-10 duration-300 transform translate-x-full group-hover:translate-x-0 ease">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                    </span>
+                    <span class="relative">Send Message</span>
+                    </a>
             </form>
         </div>
-        <div class="col-span-2 m-12 bg-gray-100 tablet:rounded-tl-[30px] tablet:rounded-tr-[100px] rounded-b-lg ">
-            <h1 class=" pt-4 tablet:pt-0 tablet:text-[24px] font-semibold m-[32px] ">What Client Say</h1>
-            <div class="border-t border-orange-600 mx-4"></div>
-            <ul id ="listContainer" class=" flex snap-x snap-mandatory  w-full h-fit  overflow-x-auto no-scrollbar mt-12 " id="">    
-                <li class="snap-center m-12 mx-4 flex-shrink-0 h-full w-full px-4 m-4 ">
-                    <p class="text-[12px] tablet:text-[16px] font-medium">Saifullah successfully created 3 separate python files to help us scrape our target sites for data. He was also patient and communicative about how to run the file and made updates when requested. </p>
+        <div class="h-fit px-8 col-span-3 m-8 bg-gray-100 tablet:rounded-tl-[30px] tablet:rounded-tr-[100px] rounded-b-lg bg-[#FEFFF4]">
+            <h1 class=" pt-4 tablet:pt-0 tablet:text-[24px] text-[#444545] font-semibold my-[32px] ">What Client Say</h1>
+            <div class="border-t border-orange-600 "></div>
+            <ul id ="listContainer" class=" flex snap-x snap-mandatory w-full h-fit  overflow-x-auto no-scrollbar mt-8 " id="">    
+                <li class="snap-center m-12 mx-4 flex-shrink-0 h-full w-full m-4 ">
+                    <p class="text-[12px] tablet:text-[16px] text-[#444545] font-medium">Saifullah successfully created 3 separate python files to help us scrape our target sites for data. He was also patient and communicative about how to run the file and made updates when requested. </p>
                     <div class="flex gap-4 mt-12">
-                    <div class="rounded-full bg-black w-8  h-8 tablet:h-12 tablet:w-12 "></div>
+                    <div class="rounded-full bg-black w-6  h-6 tablet:h-12 tablet:w-12 "></div>
                     <div>
                     <div class="text-[12px]  tablet:text-[16px] text-black">John Wick</div>
                     <div class="text-[8px] tablet:text-[12px] text-gray-600">Assistant Manager at Sauf Digital</div>
                     </div>
                     </div>  
                 </li>
-                <li class="snap-center m-12 mx-4 flex-shrink-0 h-full w-full px-4 m-4 ">
-                    <p class="text-[12px] tablet:text-[16px] font-medium">Saifullah successfully created 3 separate python files to help us scrape our target sites for data. He was also patient and communicative about how to run the file and made updates when requested. </p>
+                <li class="snap-center m-12 mx-4 flex-shrink-0 h-full w-full m-4 ">
+                    <p class="text-[12px] tablet:text-[16px] text-[#444545] font-medium">Saifullah successfully created 3 separate python files to help us scrape our target sites for data. He was also patient and communicative about how to run the file and made updates when requested. </p>
                     <div class="flex gap-4 mt-12">
-                    <div class="rounded-full bg-black w-8  h-8 tablet:h-12 tablet:w-12 "></div>
+                    <div class="rounded-full bg-black w-6  h-6 tablet:h-12 tablet:w-12 "></div>
                     <div>
                     <div class="text-[12px]  tablet:text-[16px] text-black">John Wick</div>
                     <div class="text-[8px] tablet:text-[12px] text-gray-600">Assistant Manager at Sauf Digital</div>
