@@ -97,3 +97,74 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+document.addEventListener("DOMContentLoaded", function() {
+    const menuButton = document.getElementById("menuButton");
+    const dialogBox = document.getElementById("dialogBox");
+    const line = document.getElementById("line");
+    const menubox = document.getElementById("menubox");
+    const startbutton = document.getElementById("startbutton");
+
+    // Function to show or hide the dialog box with smooth transitions
+    function toggleDialogBox() {
+        if (dialogBox.classList.contains("hidden")) {
+            dialogBox.classList.remove("hidden");
+            dialogBox.classList.add("fade-in");
+            line.classList.add("hidden");
+        } else {
+            dialogBox.classList.add("fade-out");
+            line.classList.remove("hidden");
+            setTimeout(() => {
+                dialogBox.classList.add("hidden");
+                dialogBox.classList.remove("fade-out");
+            }, 300); // Adjust the time to match your transition duration
+        }
+    }
+    // Event listener for the menu button
+    menuButton.addEventListener("click", function(event) {
+        event.stopPropagation(); // Prevents the click event from propagating to the document
+        toggleDialogBox();
+    });
+
+    // Event listener for clicks outside the dialog box
+    document.addEventListener("click", function(event) {
+        if (!menubox.contains(event.target) && !startbutton.contains(event.target) && event.target !== menuButton) {
+            dialogBox.classList.add("fade-out");
+            line.classList.remove("hidden");
+            setTimeout(() => {
+                dialogBox.classList.add("hidden");
+                dialogBox.classList.remove("fade-out");
+            }, 300); // Adjust the time to match your transition duration
+        }
+    });
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+    // Function to move to the next element
+    function moveToNextElement() {
+        // Get the container element
+        const container = document.getElementById('listContainer');
+    
+        // Calculate the current scroll position
+        const currentPosition = container.scrollLeft;
+    
+        // Get the width of the container
+        const containerWidth = container.offsetWidth;
+    
+        // Find the index of the current visible element
+        const currentIndex = Math.floor(currentPosition / containerWidth);
+    
+        // Calculate the position to scroll to (next element)
+        const nextPosition = (currentIndex + 1) * containerWidth;
+        console.log(currentPosition)
+        console.log(nextPosition);
+    
+        // Scroll to the next position smoothly
+        container.scrollTo({
+            left: nextPosition,
+            behavior: 'smooth'
+        });
+    }
+    
+    // Automatically call moveToNextElement every 5 seconds
+    setInterval(moveToNextElement, 5000); // Adjust the interval as needed (in milliseconds)
+});

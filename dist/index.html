@@ -14,12 +14,12 @@
 </head>
 
 <body class=" tablet:mx-[60px] font-poppins bg-[#FEFFEA] overflow-x-hidden">
-   
-    <header class="flex justify-between py-4 items-end">
-        <div class="w-[104px] h-[34px] ml-[12px] tablet:w-[173.72px] h-[56.49px]">
+    
+    <header class="flex justify-between py-4 items-end items-center">
+        <div class="w-[104px] h-[40px] ml-[12px] tablet:w-[173.72px] h-[56.49px]  pt-2">
             <img src="../assets/saufdigitallogo.png" alt="">
         </div>
-        <div class="tablet:hidden flex mr-[16px] text-[16px] font-semibold items-center relative">
+        <div class="tablet:hidden flex mr-[16px] text-[16px] font-semibold items-center relative h-[40px] pt-2 " id="menuButton">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-[25px] h-[25px]">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
             </svg>
@@ -32,8 +32,22 @@
             <button class="shadow-xl rounded-xl px-4 py-2">BLOG</button>
         </div>
     </header>
+    <div id="dialogBox" class="hidden z-50	fixed  w-screen h-screen justify-center items-center backdrop-filter backdrop-blur-lg ">
+        <div class="bg-sauforange  mx-2 rounded-[20px]" id="menubox">
+            <div class="flex flex-col font-semibold text-white text-[16px] mb-4 items-start">
+                <button class="  px-4 py-2 my-2 right-0">ABOUT</button>
+                <button class=" px-4 py-2 my-2 ">WORK</button>
+                <button class=" px-4 py-2 my-2 ">CONTACT</button>
+                <button class="px-4 py-2 my-2 ">BLOG</button>
+            </div>
+        </div>
+        <div class="flex flex-col items-center m-2 rounded-[50px]" id="startbutton">
+            <button class="button-85 w-full" role="button">Start a Project</button>
+        </div>
+    </div>
     
-    <div class="border-t border-orange-600 mx-2"></div>
+    
+    <div class="border-t border-orange-600 mx-2" id="line"></div>
     
     <div class=" animate-slidein h-auto w-full mt-[8px] ml-[12px] text-left z-20">
         <h1 class="font-semibold text-[#444545] text-90vh  mr-[25px]">
@@ -78,7 +92,7 @@
                 </div>
             </div> -->
 
-            <div class="animate-slidein ml-3 mt-[24px] tablet:mt-[40px] tablet:grid tablet:grid-cols-4 items-center ">
+            <div class="animate-slidein mt-[24px] tablet:mt-[40px] tablet:grid tablet:grid-cols-4 items-center ">
                 <div class=" flex flex-col items-center">
                    <div class="tablet:text-[20px] flex gap-2 font-bold font-dmsans">
                         REVIEWED ON 
@@ -146,35 +160,41 @@
     </div>
     
     <ul class="draggable flex w-full h-fit  overflow-x-scroll no-scrollbar " id="">
-        <li class="flex-shrink-0 h-full w-5/6  m-4">
-                <img src="../assets/drivermate-scroll.png" alt="" class="relative m-auto max-h-[498px] w-full px-2 pt-2 rounded-lg">
+        <li class="flex-shrink-0 h-full w-5/6  m-4  ">
+            <div class=" h-[200px] tablet:h-[498px] bg-sauforange overflow-hidden rounded-lg  hover:scale-[1.02] ease-in duration-300">
+                <img src="../assets/drivermate-img.png" alt="" class=" relative m-auto  w-full px-[40px] py-[20px] tablet:px-[80px]  tablet:py-[40px] rounded-lg">
+            </div>
                 <div class="grid grid-cols-7 tablet:grid-cols-10 text-[#444545]  m-4 items-center">
                     <h1 class="col-span-3 font-bold text-[16px] tablet:text-[40px]">DriverMate</h1>
                     <p class="col-span-4 text-[12px] tablet:text-[16px] mt-[6px] ml-[24px] ">DriverMate is a comprehensive app used for managing driver attendance and notices, as well as scheduling and routing for bus fleets.</p>
                     <div class="max-tablet:mt-4 col-span-7 tablet:col-span-3 text-[16px] flex flex-col items-center">
-                        <button class=" text-[12px] tablet:text-[16px] mx-auto bg-white px-2 py-2 rounded-xl shadow-md">SHOW PROJECT</button>
+                        <button class=" text-[12px] tablet:text-[16px] mx-auto bg-white px-[25px] py-[10px] rounded-[50px] shadow-md">SHOW PROJECT</button>
                     </div>
                 </div>
                 
         </li>
-        <li class="flex-shrink-0 h-full w-5/6  m-4">
-            <img src="../assets/pets-scroll.png" alt="" class="relative m-auto max-h-[498px] w-full px-2 pt-2 rounded-lg">
+        <li class="flex-shrink-0 h-full w-5/6  m-4  ">
+            <div class="h-[200px] tablet:h-[498px] bg-[#FFBB37] overflow-hidden rounded-lg hover:scale-[1.02] ease-in duration-300 ">
+            <img src="../assets/pet-img.png" alt="" class="object-contain relative m-auto w-full tablet:bottom-20 px-[40px] py-[5px] tablet:px-[80px]  tablet:py-[40px] rounded-lg ">
+            </div>
             <div class="grid grid-cols-7 tablet:grid-cols-10 text-[#444545]  m-4 items-center">
                 <h1 class="col-span-3 font-bold text-[16px] tablet:text-[40px]">DriverMate</h1>
                 <p class="col-span-4 text-[12px] tablet:text-[16px] mt-[6px] ml-[24px] ">DriverMate is a comprehensive app used for managing driver attendance and notices, as well as scheduling and routing for bus fleets.</p>
                 <div class="max-tablet:mt-4 col-span-7 tablet:col-span-3 text-[16px] flex flex-col items-center">
-                    <button class=" text-[12px] tablet:text-[16px] mx-auto bg-white px-2 py-2 rounded-xl shadow-md">SHOW PROJECT</button>
+                    <button class=" text-[12px] tablet:text-[16px] mx-auto bg-white px-[25px] py-[10px] rounded-[50px] shadow-md">SHOW PROJECT</button>
                 </div>
             </div>
             
     </li>
     <li class="flex-shrink-0 h-full w-5/6  m-4">
-        <img src="../assets/pn-scroll.png" alt="" class="relative m-auto max-h-[498px] w-full px-2 pt-2 rounded-lg">
+        <div class="h-[200px] tablet:h-[498px] bg-[#B1ACD3] overflow-hidden rounded-lg hover:scale-[1.02] ease-in duration-300 ">
+        <img src="../assets/fabric-img.png" alt="" class="relative m-auto w-full px-[20px] py-[20px] tablet:px-[80px]  tablet:py-[40px] rounded-lg">
+        </div>
         <div class="grid grid-cols-7 tablet:grid-cols-10 text-[#444545]  m-4 items-center">
-            <h1 class="col-span-3 font-bold text-[16px] tablet:text-[40px]">DriverMate</h1>
+            <h1 class="col-span-3 font-bold text-[16px] tablet:text-[40px]">Fabric</h1>
             <p class="col-span-4 text-[12px] tablet:text-[16px] mt-[6px] ml-[24px] ">DriverMate is a comprehensive app used for managing driver attendance and notices, as well as scheduling and routing for bus fleets.</p>
             <div class="max-tablet:mt-4 col-span-7 tablet:col-span-3 text-[16px] flex flex-col items-center">
-                <button class=" text-[12px] tablet:text-[16px] mx-auto bg-white px-2 py-2 rounded-xl shadow-md">SHOW PROJECT</button>
+                <button class=" text-[12px] tablet:text-[16px] mx-auto bg-white px-[25px] py-[10px] rounded-[50px] shadow-md">SHOW PROJECT</button>
             </div>
         </div>
         
@@ -229,8 +249,8 @@
         </div>
     </div> -->
     <div class="-mx-4 tablet:-mx-16 mt-[80px] bg-gradient-to-r from-[#f36c25] via-[#fdb72c] to-[#bb2828] p-4 tablet:p-12 tablet:rounded-tl-[100px] rounded-tl-[30px] rounded-tr-[100px] rounded-b-[30px]">
-    <div class="border border-2 tablet:grid grid-cols-2 mx-2 tablet:mx-0 my-[32px] bg-white rounded-tl-[30px] rounded-tr-[100px] rounded-b-lg">
-        <div>
+    <div class="border border-2 tablet:grid grid-cols-5 mx-2 tablet:mx-0 my-[32px] bg-white rounded-tl-[30px] rounded-tr-[100px] rounded-b-lg">
+        <div class="tablet:col-span-3">
             <h1 class=" tablet:text-[36px] font-semibold m-[32px] ">Ready to discuss
                 your project with us?</h1>
             <form class="m-[32px]" action="">
@@ -253,6 +273,33 @@
                     </div>
             </form>
         </div>
+        <div class="col-span-2 m-12 bg-gray-100 tablet:rounded-tl-[30px] tablet:rounded-tr-[100px] rounded-b-lg ">
+            <h1 class=" pt-4 tablet:pt-0 tablet:text-[24px] font-semibold m-[32px] ">What Client Say</h1>
+            <div class="border-t border-orange-600 mx-4"></div>
+            <ul id ="listContainer" class=" flex snap-x snap-mandatory  w-full h-fit  overflow-x-auto no-scrollbar mt-12 " id="">    
+                <li class="snap-center m-12 mx-4 flex-shrink-0 h-full w-full px-4 m-4 ">
+                    <p class="text-[12px] tablet:text-[16px] font-medium">Saifullah successfully created 3 separate python files to help us scrape our target sites for data. He was also patient and communicative about how to run the file and made updates when requested. </p>
+                    <div class="flex gap-4 mt-12">
+                    <div class="rounded-full bg-black w-8  h-8 tablet:h-12 tablet:w-12 "></div>
+                    <div>
+                    <div class="text-[12px]  tablet:text-[16px] text-black">John Wick</div>
+                    <div class="text-[8px] tablet:text-[12px] text-gray-600">Assistant Manager at Sauf Digital</div>
+                    </div>
+                    </div>  
+                </li>
+                <li class="snap-center m-12 mx-4 flex-shrink-0 h-full w-full px-4 m-4 ">
+                    <p class="text-[12px] tablet:text-[16px] font-medium">Saifullah successfully created 3 separate python files to help us scrape our target sites for data. He was also patient and communicative about how to run the file and made updates when requested. </p>
+                    <div class="flex gap-4 mt-12">
+                    <div class="rounded-full bg-black w-8  h-8 tablet:h-12 tablet:w-12 "></div>
+                    <div>
+                    <div class="text-[12px]  tablet:text-[16px] text-black">John Wick</div>
+                    <div class="text-[8px] tablet:text-[12px] text-gray-600">Assistant Manager at Sauf Digital</div>
+                    </div>
+                    </div>  
+                </li>
+            </ul>
+        </div>
+    
     </div>        
     </div>
     <div class="h-32"></div>
