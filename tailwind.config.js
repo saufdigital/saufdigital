@@ -71,7 +71,7 @@ module.exports = {
         },
       }
       ,
-      colors:{"sauforange" : "#F36C25"}
+      colors:{"sauforange" : "#FF4800" , "portfoliobg": '#E2ddd6'}
     },
     
     screens :{

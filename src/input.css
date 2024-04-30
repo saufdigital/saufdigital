@@ -22,7 +22,7 @@
     border: none;
     outline: none;
     color:  white;
-    background: black;
+    background: #FF4800;
     cursor: pointer;
     position: relative;
     z-index: 0;
@@ -73,22 +73,65 @@
     position: absolute;
     width: 100%;
     height: 100%;
-    background: #444545;
+    background: #FF4800;
     left: 0;
     top: 0;
     border-radius: 50px;
   }
   
-  .fade-out {
-    opacity: 0;
-    transition: opacity 0.3s ease; /* Adjust the transition duration and timing function as needed */
-}
-.fade-in {
-  opacity: 1;
-  transition: opacity 0.5s ease; /* Adjust the transition duration and timing function as needed */
-}
-
-
+  .fade-in {
+    animation: fadeIn ease 3s;
+    -webkit-animation: fadeIn ease 3s;
+    -moz-animation: fadeIn ease 3s;
+    -o-animation: fadeIn ease 3s;
+    -ms-animation: fadeIn ease 3s;
+  }
+  
+  
+  @keyframes fadeIn{
+    0% {
+      opacity:0;
+    }
+    100% {
+      opacity:1;
+    }
+  }
+  
+  @-moz-keyframes fadeIn {
+    0% {
+      opacity:0;
+    }
+    100% {
+      opacity:1;
+    }
+  }
+  
+  @-webkit-keyframes fadeIn {
+    0% {
+      opacity:0;
+    }
+    100% {
+      opacity:1;
+    }
+  }
+  
+  @-o-keyframes fadeIn {
+    0% {
+      opacity:0;
+    }
+    100% {
+      opacity:1;
+    }
+  }
+  
+  @-ms-keyframes fadeIn {
+    0% {
+      opacity:0;
+    }
+    100% {
+      opacity:1;
+    }
+  }
  /* Button styles */
  .navbutton {
   display: inline-block;
