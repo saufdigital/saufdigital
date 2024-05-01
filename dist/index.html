@@ -14,10 +14,10 @@
 
 </head>
 
-<body class=" !scroll-smooth tablet:mx-[60px] font-poppins bg-[#Fafafa] overflow-x-hidden">
+<body class=" tablet:mx-[60px] font-poppins bg-[#Fafafa] overflow-x-hidden">
     
-    <header class="flex justify-between py-4 items-end items-center mt-4 bg-inherit">
-        <div class="w-[104px] h-[40px] ml-[12px] tablet:w-[173.72px] h-[56.49px] ">
+    <header class="flex justify-between py-4 tablet:items-end items-center mt-4 bg-inherit">
+        <div class="w-[130px] h-[40px] ml-[20px] tablet:ml-[12px] tablet:w-[173.72px] h-[56.49px] ">
             <img src="../assets/saufdigitallogo.png" alt="">
         </div>
         <div class="tablet:hidden flex mr-[16px] text-[16px] font-semibold items-center relative h-[40px] pt-2 " id="menuButton">
@@ -26,14 +26,14 @@
             </svg>
             <span class="ml-2">Menu</span>
         </div>
-        <div class="relative max-tablet:hidden grid grid-cols-4 gap-x-4 font-bold top-4">
-            <button class="navbutton" >About</button>
-            <button class="navbutton">Work</button>
-            <button class="navbutton ">Contact</button>
-            <button class="navbutton ">Blog</button>
+        <div class="relative max-tablet:hidden grid grid-cols-4 gap-x-4 font-bold ">
+            <button class="navbutton" > <a href="./about.html">About</a></button>
+            <button class="navbutton"><a href="#work">Work</a> </button>
+            <button class="navbutton "><a href="#contact">Contact</a> </button>
+            <button class="navbutton "><a href="#blogs">Blog</a></button>
         </div>
     </header>
-    <div class="fade-in">
+    
     <div id="dialogBox" class="hidden z-50	fixed  w-screen h-screen justify-center items-center backdrop-filter backdrop-blur-lg ">
         <div class="bg-sauforange  mx-2 rounded-[20px]" id="menubox">
             <div class="flex flex-col font-semibold text-white text-[16px] mb-4 items-start">
@@ -43,20 +43,20 @@
                 <button class="px-4 py-2 my-2 ">BLOG</button>
             </div>
         </div>
+        
         <div class="flex flex-col items-center m-2 rounded-[50px]" id="startbutton">
             <button class="button-85 w-full" role="button">Start a Project</button>
         </div>
     </div>
-    
-    
     <div class="border-t border-orange-600 mx-2" id="line"></div>
-    <div class="  h-auto w-full mt-[8px] ml-[12px] text-left z-20">
-        <h1 class="font-semibold text-[#444545] text-90vh  tablet:mr-[25px]">
+    <div class="fade-in">
+    <div class="  h-auto w-full mt-[8px] ml-[20px] tablet:ml-[12px] text-left z-20">
+        <h1 class="font-semibold text-[#444545] max-tablet:text-mob text-90vh  tablet:mr-[25px]">
             CRAFT. DEVELOP. ANALYZE.
         </h1>
     </div>
     
-            <p class=" leading-9 font-100  font-light  text-black text-[16px] tablet:text-[20px] ml-3 mt-[6px]">
+            <p class="leading-6 tablet:leading-9 font-100  font-light  text-black text-[16px] tablet:text-[20px]  ml-[20px] tablet:ml-[12px] mt-[6px]">
                 Sauf Digital pushes the boundaries of design. We don't just create visuals, we leverage data to meticulously craft user experiences that bring your vision to life. Throughout the entire process, we'll be by your side, transforming your initial ideas into groundbreaking realities. This unique approach, blending data-driven design with collaborative partnership, unleashes the full potential of your project.
             </p>
 <!--             
@@ -92,7 +92,7 @@
             </div> -->
 
             <div class=" mt-[24px] tablet:mt-[40px] tablet:grid tablet:grid-cols-4 items-center ">
-                <div class=" flex flex-col items-center">
+                <div class=" flex flex-col items-center ">
                    <div class="tablet:text-[20px] flex gap-2 font-bold font-dmsans">
                         REVIEWED ON 
                         <div class="flex items-center">
@@ -120,7 +120,7 @@
         
                    </div>
                 </div>
-                <div class="max-tablet:mt-4 flex flex-col items-center">
+                <div class="max-tablet:mt-4 flex flex-col items-center ">
                     <div class="tablet:text-[20px] flex gap-2 font-bold font-dmsans">
                          REVIEWED ON 
                          <div class="flex items-center">
@@ -141,8 +141,8 @@
                              </svg>
                          </div>       
                     </div> 
-                    <div class="flex items-center  gap-4 tablet:mt-[12px] ">
-                     <img src="../assets/fiverr-logo.png" alt="" class="h-[25px]">
+                    <div class="flex items-center  gap-4 tablet:mt-[11.5px] ">
+                     <img src="../assets/fiverr-logo.png" alt="" class="h-[25px] max-tablet:h-[28px]">
                      <p class="relative font-bold text-[16px] font-dmsans pt-2 ">100+ REVIEWS</p>
                     </div>
                  </div>
@@ -153,7 +153,7 @@
                  </div>
              </div>
         </div>
-    <div class=" fade-in text-[20px] font-semibold m-2 tablet:text-[48px] mt-24">
+    <div  id="work" class=" fade-in text-[32px] font-semibold m-2 tablet:text-[48px] mt-24">
         Our Projects
     </div>
     
@@ -261,7 +261,7 @@
             </div>
         </div>
     </div> -->
-    <div class="-mx-4 tablet:-mx-16 mt-[80px] bg-[#1d1d1d]  p-4 tablet:p-12 tablet:rounded-tl-[30px] rounded-tl-[30px] tablet:rounded-tr-[30px] rounded-b-[30px]">
+    <div id="contact" class="-mx-4 tablet:-mx-16 mt-[80px] bg-[#1d1d1d]  p-4 tablet:p-12 tablet:rounded-tl-[30px] rounded-tl-[30px] tablet:rounded-tr-[30px] rounded-b-[30px]">
     <div class="px-4 border border-2 tablet:grid grid-cols-6 mx-2 tablet:mx-16 my-[32px] bg-[#f1f1f1] rounded-tl-[30px] rounded-tr-[100px] rounded-b-[30px] ">
         <div class="tablet:col-span-3">
             <h1 class=" tablet:text-[36px] font-semibold m-[32px] leading-tight">Ready to discuss
@@ -319,12 +319,12 @@
     
     </div>        
     </div>
-    <div class=" text-[20px] font-semibold m-2 mt-[25px] tablet:text-[48px] tablet:mt-[48px] ">
+    <div id="blogs" class=" text-[32px] font-semibold m-2 tablet:text-[48px] mt-[48px] ">
         Blogs
     </div>
     
     <div class="tablet:grid grid-cols-3 gap-4 mt-4">
-        <div class=" relative flex  flex-col justify-center overflow-hidden py-6 sm:py-12">
+        <div class=" relative flex  flex-col justify-center overflow-hidden py-6 px-2  tablet:px-0 sm:py-12">
             <div
                 class="group relative rounded-lg cursor-pointer overflow-hidden bg-[#f1f1f1] px-6 pt-10 pb-8  ring-1 ring-gray-900/5 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl sm:mx-auto sm:max-w-sm sm:rounded-lg sm:px-10">
                 <span class="absolute top-10 z-0 h-20 w-20 rounded-full bg-sauforange transition-all duration-300 group-hover:scale-[10]"></span>
@@ -350,7 +350,7 @@
                 </div>
             </div>
         </div>
-        <div class=" relative flex  flex-col justify-center overflow-hidden  py-6 sm:py-12">
+        <div class=" relative flex  flex-col justify-center overflow-hidden px-2 py-6 sm:py-12">
             <div
                 class="group relative rounded-lg cursor-pointer overflow-hidden bg-[#f1f1f1] px-6 pt-10 pb-8  ring-1 ring-gray-900/5 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl sm:mx-auto sm:max-w-sm sm:rounded-lg sm:px-10">
                 <span class="absolute top-10 z-0 h-20 w-20 rounded-full bg-sauforange transition-all duration-300 group-hover:scale-[10]"></span>
@@ -376,7 +376,7 @@
                 </div>
             </div>
         </div>
-        <div class=" relative flex  flex-col justify-center overflow-hidden  py-6 sm:py-12">
+        <div class=" relative flex  flex-col justify-center overflow-hidden px-2 py-6 sm:py-12">
             <div
                 class="group relative rounded-lg cursor-pointer overflow-hidden bg-[#f1f1f1] px-6 pt-10 pb-8 ring-1 ring-gray-900/5 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl sm:mx-auto sm:max-w-sm sm:rounded-lg sm:px-10">
                 <span class="absolute top-10 z-0 h-20 w-20 rounded-full bg-sauforange transition-all duration-300 group-hover:scale-[10]"></span>
@@ -404,15 +404,20 @@
         </div>
     </div>
 
-    <div class="-mx-16 p-4 h-screen mt-4  ">
-        <div class="grid grid-cols-10">
-        <img src="../assets/saufdigitallogo.png" alt="" class="col-span-5 mx-12 my-4">
+    <div class="tablet:-mx-16 p-4 h-screen mt-2 tablet:mt-4">
+        <div class="tablet:grid grid-cols-10">
+        <img src="../assets/saufdigitallogo.png" alt="" class=" col-span-3 tablet:mx-12 my-4">
         <ul class="col-span-2 my-4">
-                <li class="pb-4 navbutton">Home</li>
-                <li class="pb-4 navbutton">Work</li>
-                <li class="pb-4 navbutton">About</li>
-                <li class="pb-4 navbutton">Blog</li>
+                <li class="pb-4 navbutton"><a href="./index.html">Home</a></li>
+                <li class="pb-4 navbutton"><a href="#work">Work</a> </li>
+                <li class="pb-4 navbutton"><a href="./about.html">About</a></li>
+                <li class="pb-4 navbutton"><a href="#blogs">Blog</a> </li>
         </ul>
+        <ul class="col-span-2 my-4">
+            <li class="pb-4 navbutton"><a target=”_blank” href="https://www.linkedin.com/company/sauf-digital">Linkedin</a> </li>
+            <li class="pb-4 navbutton"><a  target=”_blank” href="https://www.instagram.com/saufdigital/">Instagram</a></li>
+            <li class="pb-4 navbutton"><a target=”_blank”  href="https://www.facebook.com/saufdigital">Facebook</a> </li>
+    </ul>
         <ul class="col-span-3 my-4">
             <li class="pb-4 navbutton">Privacy Policy</li>
             <li class="pb-4 navbutton">Terms & Conditions</li>
@@ -443,40 +448,40 @@
                     <p class="font-bold text-[16px] font-dmsans">50+ REVIEWS</p>
         
                    </div>
-                   <div class=" flex flex-col mt-4">
-                    <div class="text-[9px] tablet:text-[16px] flex gap-2 font-bold font-dmsans">
+                   <div class=" flex flex-col mt-4 ">
+                    <div class="tablet:text-[16px] flex gap-2 font-bold font-dmsans">
                          REVIEWED ON 
                          <div class="flex items-center">
-                             <svg class="w-3 h-3 tablet:w-4 tablet:h-4 text-[#FFBB37] ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                             <svg class="w-4 h-4 text-[#FFBB37] ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
                                  <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
                              </svg>
-                             <svg class="w-3 h-3 tablet:w-4 tablet:h-4 text-[#FFBB37] ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                             <svg class="w-4 h-4 text-[#FFBB37] ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
                                  <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
                              </svg>
-                             <svg class="w-3 h-3 tablet:w-4 tablet:h-4 text-[#FFBB37] ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                             <svg class="w-4 h-4 text-[#FFBB37] ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
                                  <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
                              </svg>
-                             <svg class="w-3 h-3 tablet:w-4 tablet:h-4 text-[#FFBB37] ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                             <svg class="w-4 h-4 text-[#FFBB37] ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
                                  <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
                              </svg>
-                             <svg class="w-3 h-3 tablet:w-4 tablet:h-4 ms-1 text-[#FFBB37]" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                             <svg class="w-4 h-4 ms-1 text-[#FFBB37]" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
                                  <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
                              </svg>
                          </div>       
                     </div> 
                     <div class="flex items-center gap-4 tablet:mt-[12px] ">
-                     <img src="../assets/fiverr-logo.png" alt="" class=" tablet:h-[25px]">
+                     <img src="../assets/fiverr-logo.png" alt="" class=" h-[25px]">
                      
-                     <p class="font-bold text-[16px] font-dmsans pt-2">100+ REVIEWS</p>
+                     <p class="font-bold text-[16px] font-dmsans">100+ REVIEWS</p>
          
                     </div>
     </ul>
          </div>
-         <div class="flex  items-center py-4  w-full skilldouble h-fit text-white text-40vh mt-8">
+         <div class="flex  items-center py-4  w-full skilldouble h-fit text-white text-50vh tablet:text-40vh mt-8">
             <p>Lets have a chat</p>                    
 
          </div>
-         <div class=" w-full text-end p-4 relative tablet:-bottom-20 tablet:right-0  right-10 ">
+         <div class="max-tablet:flex flex-col items-center w-full tablet:text-end p-4 relative text-sm  tablet:-bottom-20  tablet:right-10 ">
             ©2024 SAUF DIGITAL ALL RIGHTS RESERVED
          </div>
         </div>

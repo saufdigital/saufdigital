@@ -108,15 +108,10 @@ document.addEventListener("DOMContentLoaded", function() {
     function toggleDialogBox() {
         if (dialogBox.classList.contains("hidden")) {
             dialogBox.classList.remove("hidden");
-            dialogBox.classList.add("fade-in");
             line.classList.add("hidden");
         } else {
-            dialogBox.classList.add("fade-out");
             line.classList.remove("hidden");
-            setTimeout(() => {
                 dialogBox.classList.add("hidden");
-                dialogBox.classList.remove("fade-out");
-            }, 300); // Adjust the time to match your transition duration
         }
     }
     // Event listener for the menu button
@@ -128,12 +123,8 @@ document.addEventListener("DOMContentLoaded", function() {
     // Event listener for clicks outside the dialog box
     document.addEventListener("click", function(event) {
         if (!menubox.contains(event.target) && !startbutton.contains(event.target) && event.target !== menuButton) {
-            dialogBox.classList.add("fade-out");
             line.classList.remove("hidden");
-            setTimeout(() => {
                 dialogBox.classList.add("hidden");
-                dialogBox.classList.remove("fade-out");
-            }, 300); // Adjust the time to match your transition duration
         }
     });
 });

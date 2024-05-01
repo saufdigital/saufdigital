@@ -1,0 +1,208 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sauf Digital</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="icon" href="../assets//saufdigitallogo.png" type="image/icon type">
+
+</head>
+
+<body class=" !scroll-smooth tablet:mx-[60px] font-poppins bg-[#Fafafa] overflow-x-hidden">
+    
+    <header class="flex justify-between py-4 items-end items-center mt-4 bg-inherit">
+        <div class="w-[104px] h-[40px] ml-[12px] tablet:w-[173.72px] h-[56.49px] ">
+            <img src="../assets/saufdigitallogo.png" alt="">
+        </div>
+        <div class="tablet:hidden flex mr-[16px] text-[16px] font-semibold items-center relative h-[40px] pt-2 " id="menuButton">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-[25px] h-[25px]">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+            <span class="ml-2">Menu</span>
+        </div>
+        <div class="relative max-tablet:hidden grid grid-cols-4 gap-x-4 font-bold top-4">
+            <button class="navbutton" > <a href="./about.html">About</a></button>
+            <button class="navbutton"><a href="./index.html#work">Work</a> </button>
+            <button class="navbutton "><a href="#contact">Contact</a> </button>
+            <button class="navbutton "><a href="./index.html#blogs">Blog</a></button>
+        </div>
+    </header>
+    <div class="fade-in">
+    <div id="dialogBox" class="hidden z-50	fixed  w-screen h-screen justify-center items-center backdrop-filter backdrop-blur-lg ">
+        <div class="bg-sauforange  mx-2 rounded-[20px]" id="menubox">
+            <div class="flex flex-col font-semibold text-white text-[16px] mb-4 items-start">
+                <button class="  px-4 py-2 my-2 right-0">ABOUT</button>
+                <button class=" px-4 py-2 my-2 ">WORK</button>
+                <button class=" px-4 py-2 my-2 ">CONTACT</button>
+                <button class="px-4 py-2 my-2 ">BLOG</button>
+            </div>
+        </div>
+        <div class="flex flex-col items-center m-2 rounded-[50px]" id="startbutton">
+            <button class="button-85 w-full" role="button">Start a Project</button>
+        </div>
+    </div>
+    
+    
+    <div class="border-t border-orange-600 mx-2" id="line"></div>
+    <div class="  h-auto w-full mt-[8px] ml-[12px] text-left z-20">
+        <h1 class="font-semibold text-[#444545] text-50vh  tablet:mr-[25px]">
+            WORK. TRUST. RELATIONSHIP
+        </h1>
+    </div>
+    
+            <p class=" leading-regular font-100  font-light  text-black text-[20px] font-semibold tablet:text-[48px] ml-3 mt-[6px]">
+                We launched in 2018 to disrupt the traditional agency model.
+                Since then we've served as design partner to dozens of early-stage startups, launching them from zero to one and beyond.</p>
+             </div>
+        </div>
+    <div class=" fade-in text-[20px] font-semibold m-2 tablet:text-[48px] mt-24">
+        <h2 class="text-gray-400">Our Mission</h2>
+        <p>We launched in 2018 to disrupt the traditional agency model.
+            Since then we've served as design partner to dozens of early-stage startups, launching them from zero to one and beyond.</p>
+    </div>
+    <div id="contact" class="-mx-4 tablet:-mx-16 mt-[80px] bg-[#1d1d1d]  p-4 tablet:p-12 tablet:rounded-tl-[30px] rounded-tl-[30px] tablet:rounded-tr-[30px] rounded-b-[30px]">
+    <div class="px-4 border border-2 tablet:grid grid-cols-6 mx-2 tablet:mx-16 my-[32px] bg-[#f1f1f1] rounded-tl-[30px] rounded-tr-[100px] rounded-b-[30px] ">
+        <div class="tablet:col-span-3">
+            <h1 class=" tablet:text-[36px] font-semibold m-[32px] leading-tight">Ready to discuss
+                your project with us?</h1>
+            <form class="m-[32px]" action="">
+                <div class="tablet:grid grid-cols-2 gap-4">
+                <div>
+                <label class="font-semibold text-[16px]">Name</label>
+                <input type="text" class="text-[14px] my-4 w-full border border-2 border-[#EEEEEE] bg-[#fafafa] p-2 rounded-lg" placeholder="Jane">
+                </div>
+                <div>
+                    <label class="font-semibold text-[16px]">Email</label>
+                    <input type="email" class="text-[14px] my-4 w-full border border-2 border-[#EEEEEE] bg-[#fafafa] p-2 rounded-lg" placeholder="Jane@work.com">
+                </div>
+                </div>
+                    <div class="mt-[28px]">
+                    <label class="font-semibold text-[16px]">Tell us About your project</label>
+                    <textarea type="text"  rows="2" class="text-[14px] my-4 w-full border border-2 border-[#EEEEEE] bg-[#fafafa] p-4 rounded-lg" placeholder="I would like to take my website to next level 🚀"></textarea>
+                    </div>
+                    <a href="#_" class="relative inline-flex items-center px-12 py-3 overflow-hidden text-[14px] font-medium text-sauforange border-2 border-sauforange rounded-full hover:text-white group hover:bg-gray-50">
+                    <span class="absolute left-0 block w-full h-0 transition-all bg-sauforange opacity-100 group-hover:h-full top-1/2 group-hover:top-0 duration-400 ease"></span>
+                    <span class="absolute right-0 flex items-center justify-start w-10 h-10 duration-300 transform translate-x-full group-hover:translate-x-0 ease">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                    </span>
+                    <span class="relative">Send Message</span>
+                    </a>
+            </form>
+        </div>
+        <div class="h-fit px-8 py-8 col-span-3 m-8 bg-sauforange tablet:rounded-tl-[30px] tablet:rounded-tr-[100px] rounded-b-lg bg-[#FEFFF4]">
+            <h1 class=" pt-4 tablet:pt-0 tablet:text-[24px] text-white font-semibold my-[32px] ">What Client Say</h1>
+            <div class="border-t border-white "></div>
+            <ul id ="listContainer" class=" flex snap-x snap-mandatory w-full h-fit  overflow-x-auto no-scrollbar mt-8 " id="">    
+                <li class="snap-center m-12 mx-4 flex-shrink-0 h-full w-full m-4 ">
+                    <p class="text-[12px] tablet:text-[16px] text-white font-medium">Saifullah successfully created 3 separate python files to help us scrape our target sites for data. He was also patient and communicative about how to run the file and made updates when requested. </p>
+                    <div class="flex gap-4 mt-12">
+                    <div class="rounded-full bg-black w-6  h-6 tablet:h-12 tablet:w-12 "></div>
+                    <div>
+                    <div class="text-[12px]  tablet:text-[16px] text-white">John Wick</div>
+                    <div class="text-[8px] tablet:text-[12px] text-white">Assistant Manager at Sauf Digital</div>
+                    </div>
+                    </div>  
+                </li>
+                <li class="snap-center m-12 mx-4 flex-shrink-0 h-full w-full m-4 ">
+                    <p class="text-[12px] tablet:text-[16px] text-white font-medium">Saifullah successfully created 3 separate python files to help us scrape our target sites for data. He was also patient and communicative about how to run the file and made updates when requested. </p>
+                    <div class="flex gap-4 mt-12">
+                    <div class="rounded-full bg-black w-6  h-6 tablet:h-12 tablet:w-12 "></div>
+                    <div>
+                    <div class="text-[12px]  tablet:text-[16px] text-white">John Wick</div>
+                    <div class="text-[8px] tablet:text-[12px] text-white">Assistant Manager at Sauf Digital</div>
+                    </div>
+                    </div>  
+                </li>
+            </ul>
+        </div>
+    
+    </div>        
+    </div>
+    <div class="-mx-16 p-4 h-screen mt-4  ">
+        <div class="grid grid-cols-10">
+        <img src="../assets/saufdigitallogo.png" alt="" class="col-span-5 mx-12 my-4">
+        <ul class="col-span-2 my-4">
+                <li class="pb-4 navbutton">Home</li>
+                <li class="pb-4 navbutton">Work</li>
+                <li class="pb-4 navbutton">About</li>
+                <li class="pb-4 navbutton">Blog</li>
+        </ul>
+        <ul class="col-span-3 my-4">
+            <li class="pb-4 navbutton">Privacy Policy</li>
+            <li class="pb-4 navbutton">Terms & Conditions</li>
+                <div class=" flex flex-col mt-4 ">
+                   <div class="tablet:text-[16px] flex gap-2 font-bold font-dmsans">
+                        REVIEWED ON 
+                        <div class="flex items-center">
+                            <svg class="w-4 h-4 text-[#FFBB37] ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                                <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                            </svg>
+                            <svg class="w-4 h-4 text-[#FFBB37] ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                                <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                            </svg>
+                            <svg class="w-4 h-4 text-[#FFBB37] ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                                <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                            </svg>
+                            <svg class="w-4 h-4 text-[#FFBB37] ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                                <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                            </svg>
+                            <svg class="w-4 h-4 ms-1 text-[#FFBB37]" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                                <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                            </svg>
+                        </div>       
+                   </div> 
+                   <div class="flex items-center gap-4 tablet:mt-[12px] ">
+                    <img src="../assets/upwork-logo.png" alt="" class=" h-[25px]">
+                    
+                    <p class="font-bold text-[16px] font-dmsans">50+ REVIEWS</p>
+        
+                   </div>
+                   <div class=" flex flex-col mt-4">
+                    <div class="text-[9px] tablet:text-[16px] flex gap-2 font-bold font-dmsans">
+                         REVIEWED ON 
+                         <div class="flex items-center">
+                             <svg class="w-3 h-3 tablet:w-4 tablet:h-4 text-[#FFBB37] ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                                 <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                             </svg>
+                             <svg class="w-3 h-3 tablet:w-4 tablet:h-4 text-[#FFBB37] ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                                 <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                             </svg>
+                             <svg class="w-3 h-3 tablet:w-4 tablet:h-4 text-[#FFBB37] ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                                 <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                             </svg>
+                             <svg class="w-3 h-3 tablet:w-4 tablet:h-4 text-[#FFBB37] ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                                 <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                             </svg>
+                             <svg class="w-3 h-3 tablet:w-4 tablet:h-4 ms-1 text-[#FFBB37]" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                                 <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                             </svg>
+                         </div>       
+                    </div> 
+                    <div class="flex items-center gap-4 tablet:mt-[12px] ">
+                     <img src="../assets/fiverr-logo.png" alt="" class=" tablet:h-[25px]">
+                     
+                     <p class="font-bold text-[16px] font-dmsans pt-2">100+ REVIEWS</p>
+         
+                    </div>
+    </ul>
+         </div>
+         <div class="flex  items-center py-4  w-full skilldouble h-fit text-white text-40vh mt-8">
+            <p>Lets have a chat</p>                    
+
+         </div>
+         <div class=" w-full text-end p-4 relative tablet:-bottom-20 tablet:right-0  right-10 ">
+            ©2024 SAUF DIGITAL ALL RIGHTS RESERVED
+         </div>
+        </div>
+
+    <script src="script.js"></script>
+        
+<!-- Header -->
+</body>
+</html>
