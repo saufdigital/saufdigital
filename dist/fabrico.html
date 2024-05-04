@@ -1,0 +1,108 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="icon" href="../assets//saufdigitallogo.png" type="image/icon type">
+
+</head>
+<body class=" tablet:mx-[60px] font-helvetica bg-[#Fafafa] overflow-x-hidden">
+
+<header class="flex justify-between py-4 tablet:items-end items-center mt-4 bg-inherit">
+    <div class="w-[130px] h-[40px] ml-[20px] tablet:ml-[12px] tablet:w-[173.72px] h-[56.49px] ">
+        <img src="../assets/saufdigitallogo.png" alt="">
+    </div>
+    <div class="tablet:hidden flex mr-[16px] text-[16px] font-semibold items-center relative h-[40px] pt-2 " id="menuButton">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-[25px] h-[25px]">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+        </svg>
+        <span class="ml-2">Menu</span>
+    </div>
+    <div class="relative max-tablet:hidden grid grid-cols-4 gap-x-4 font-bold ">
+        <button class="navbutton" > <a href="./about.html">About</a></button>
+        <button class="navbutton"><a href="#work">Work</a> </button>
+        <button class="navbutton "><a href="#contact">Contact</a> </button>
+        <button class="navbutton "><a href="#blogs">Blog</a></button>
+    </div>
+</header>
+ 
+<div id="dialogBox" class="hidden z-50	fixed  w-screen h-screen justify-center items-center backdrop-filter backdrop-blur-lg ">
+    <div class="bg-sauforange  mx-2 rounded-[20px]" id="menubox">
+        <div class="flex flex-col font-semibold text-white text-[16px] mb-4 items-start">
+            <button class="  px-4 py-2 my-2 right-0">ABOUT</button>
+            <button class=" px-4 py-2 my-2 ">WORK</button>
+            <button class=" px-4 py-2 my-2 ">CONTACT</button>
+            <button class="px-4 py-2 my-2 ">BLOG</button>
+        </div>
+    </div>
+    
+    <div class="flex flex-col items-center m-2 rounded-[50px]" id="startbutton">
+        <button class="button-85 w-full" role="button">Start a Project</button>
+    </div>
+</div>
+<div class="border-t border-orange-600 mx-2" id="line"></div>
+
+<div class="max-tablet:ml-3 grid grid-cols-10 mt-4 h-fit gap-4">
+    <div class="col-span-5">
+        <h1 class="text-[24px] tablet:text-[75px] font-bold">Fabrico</h1>
+        <p class="text-[12px] tablet:text-[25px] font-thin mt-1">"FabriCo" is a fabric ordering app that lets users choose from a wide range of patterns and order their desired fabric with just a few taps.</p>
+    </div>
+    <div class="relative col-span-2">
+        <div class="absolute"> 
+            <div class="text-[12px] tablet:text-[25px] font-thin"> Year </div>
+            <div class="text-[12px] tablet:text-[25px] font-thin"> 2023 </div>
+        </div>
+        <div class="absolute bottom-0">
+            <div class="text-[12px] tablet:text-[25px] font-thin mt-12 relative bottom-0 "> Client </div>
+            <div class="text-[12px] tablet:text-[25px] font-thin"> Freelance </div>
+        </div>
+    </div>
+    <div class="relative col-span-3 ">
+        <div class="absolute "> 
+            <div class="text-[12px] tablet:text-[25px] font-thin"> Role </div>
+            <div class="text-[12px] tablet:text-[25px] font-thin"> UI/UX Design & Research </div>
+        </div>
+        <div class="absolute  bottom-0">
+            <div class="text-[12px] tablet:text-[25px] font-thin mt-12 relative bottom-0 "> Platform </div>
+            <div class="text-[12px] tablet:text-[25px] font-thin"> IOS App design </div>
+        </div>
+    </div>
+
+</div>
+<div class="max-tablet:ml-3  mt-8 tablet:mt-24">
+    <img src="../assets/fabrico-image-1.png" alt="">
+</div>
+
+<div class="max-tablet:ml-3 tablet:grid grid-cols-2 mt-12 gap-4">
+    <div class="text-[12px] tablet:text-[25px]">
+        <p>The screens are designed to allow users to browse and inquire about available fabrics for a specific product. The first screen is the fabric selection screen, which features a clean and simple design with a grid or list of available fabrics. Users can search, filter, and sort through the available fabrics to find what they're looking for. Each fabric option is displayed as a thumbnail or swatch, along with a brief description of its properties.</p>
+        <p class="mt-8">The second screen is the product single page, which displays detailed information about the selected product, including its features, pricing, and availability. Users can view the product details and inquire about the available fabrics by filling out a contact form or contacting customer support. The screen also features a call-to-action button that directs users to the fabric selection screen.</p>
+    </div>
+    <div class="max-tablet:mt-8" >
+        <img src="../assets/fabrico-image-2.png" alt="">
+    </div>
+</div>
+
+<div class="max-tablet:ml-3 tablet:grid grid-cols-2 mt-12 gap-4 h-fit">
+    <div class="max-h-full">
+        <img src="../assets/fabrico-image-3.png" alt="">
+    </div>
+    <div class="text-[12px] tablet:text-[25px]">
+        <p>The pop-up is designed to allow users to easily inquire about their favorite fabric from the product single page. When a user clicks on the "Inquire about Fabric" button, a pop-up window appears with a form where the user can input their contact information and message.        </p>
+        <p class="mt-8">The pop-up has a clean and simple design that matches the overall aesthetic of the website. The header of the pop-up contains the name of the product, and the form is clearly labeled with fields for the fabric, color, fabric code, and message.        </p>
+        <p class="mt-8">Once the user submits the form, they will receive a confirmation message that their inquiry has been received and will be processed as soon as possible. The pop-up  also include a cancel button that allows users to close the window and return to the product single page. </p>
+
+    </div>
+</div>
+
+<div class=" text-[28px] tablet:text-[50px] w-full leading-tight mt-16  flex flex-col items-center ">
+    <p class=" w-5/6 ">" I am thrilled with the app that was designed for me. He did an excellent job of understanding my vision and translating it into a user-friendly and visually appealing interface. They were professional, responsive, and delivered on time. I would definitely work with them again! "</p>
+</div>
+</body>

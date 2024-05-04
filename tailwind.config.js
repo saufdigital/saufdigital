@@ -5,9 +5,17 @@ module.exports = {
   content: ["./dist/*.{html,js}"],
   theme: {
     extend: {
+      backgroundSize: {
+        'size-200': '200% 200%',
+      },
+      backgroundPosition: {
+        'pos-0': '0% 0%',
+        'pos-100': '100% 100%',
+      },
       fontFamily:{
         poppins : "'Poppins' , sans-serif",
-        dmsans : "'DM Sans' , sans-serif"
+        dmsans : "'DM Sans' , sans-serif",
+        helvetica : ['HELVETICA' , 'sans-serif']
       },
       animation:{
         slidein: "slidein 1s ease 300ms;",

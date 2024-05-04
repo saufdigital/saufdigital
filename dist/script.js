@@ -159,3 +159,19 @@ document.addEventListener("DOMContentLoaded", function() {
     // Automatically call moveToNextElement every 5 seconds
     setInterval(moveToNextElement, 5000); // Adjust the interval as needed (in milliseconds)
 });
+
+function changeImage() {
+    var images = ['../assets/365paws.png' , '../assets/drivermate-img.png' ,'../assets/fabric-img.png']; // Array of image sources
+    var currentIndex = 0; // Start index
+    
+    setInterval(function() {
+      var image = document.getElementById('myImage');
+      // Change the source of the image
+      image.src = images[currentIndex];
+      currentIndex = (currentIndex + 1) % images.length; // Move to the next image source
+    }, 2000); // Repeat every 2 seconds
+  }
+  
+  // Call the function to initiate the change
+document.addEventListener('DOMContentLoaded', changeImage);
+
