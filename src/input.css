@@ -6,10 +6,23 @@ html { scroll-behavior: smooth; }
 	width: 100%;
 	animation: change-img-anim 6s infinite;
 }
-
+@layer base {
 @font-face{
   font-family: 'HELVETICA';
   src: url('../fonts/Helvetica.ttf')
+}
+@font-face{
+  font-family: 'COUTURE';
+  src: url('../fonts/couture-bld.otf')
+}
+@font-face{
+  font-family: 'HELVETICA-LIGHT';
+  src: url('../fonts/helvetica-light-587ebe5a59211.ttf')
+}
+@font-face{
+  font-family: 'RECOLETA';
+  src: url('../fonts/Recoleta-RegularDEMO.otf')
+}
 }
 .changeimage:nth-of-type(1) {
     animation-delay: 4s;
@@ -214,4 +227,70 @@ html { scroll-behavior: smooth; }
 .skilldouble:hover {
     box-shadow: inset 2000px 0 0 0 #e1531b;
     color: #fff;
+}
+
+
+.shadow-custom {
+  --shadow-blur: 19.17px;
+  --shadow-spread: 4.79px;
+  --shadow-x: 0px;
+  --shadow-y: 3.83px;
+  --shadow-color: rgba(0, 0, 0, 0.05);
+  box-shadow: var(--shadow-x) var(--shadow-y) var(--shadow-blur) var(--shadow-spread) var(--shadow-color);
+}
+
+.services-box {
+  min-width: 300px;
+  display: inline-block;
+  text-align: left;
+  color: white;
+  position: relative; /* Needed for absolute positioning */
+
+  /* Linear gradient from bottom to top */
+  background-image: linear-gradient(to top, #FF4800 50%, rgb(243 244 246) 50%);
+  background-size: 100% 200%; /* Width: 100%, Height: 200% to fill bottom to top */
+  background-position: top; /* Start position: top */
+  transition: background-position 0.3s ease-in; /* Transition for background position */
+}
+
+.services-box:hover {
+  background-position: bottom; /* Change background position to bottom on hover */
+}
+
+.heading {
+  padding-top: 50px;
+  padding-left: 20px;
+  padding-right: 10px;
+  position: absolute;
+  bottom: 0px; /* Adjust the bottom distance as needed */
+  left: 20px; /* Adjust the left distance as needed */
+  transition: transform 0.3s ease-in-out, color 0.3s ease-in-out; /* Transition for heading */
+}
+#myImg {
+  position: absolute;
+  right: 50%;
+  top: 20%;
+  width: 40%;
+  height: 40%;
+  background-image: url("../assets/staticimage.jpg");
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+  display: none; /* Hide initially */
+}
+.description {
+  padding-left: 20px;
+  padding-right: 10px;
+  position: absolute;
+  bottom: 10px; /* Adjust the bottom distance as needed */
+  left: 20px; /* Adjust the left distance as needed */
+  color: black; /* Description text color */
+}
+
+.services-box:hover .heading {
+  color: white; /* Change heading text color on hover */
+}
+
+.services-box:hover .description {
+  color: white; /* Change description text color on hover */
 }

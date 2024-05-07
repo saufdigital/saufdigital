@@ -71,6 +71,79 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 document.addEventListener('DOMContentLoaded', function() {
+    const slider = document.querySelector('.draggable2');
+    const items = slider.children;
+    const middleIndex = Math.floor(items.length / 2);
+    const middleElement = items[middleIndex];
+
+    // Calculate the position of the middle of the ul
+    const ulMiddle = slider.offsetWidth / 2;
+
+    // Calculate the position of the middle of the middle element
+    const middleElementMiddle = middleElement.offsetLeft + middleElement.offsetWidth / 2;
+
+    // Calculate the initial scroll position to center the middle element
+    let initialScrollLeft = middleElementMiddle - ulMiddle;
+
+    // Make sure initialScrollLeft is within bounds
+    initialScrollLeft = Math.max(0, Math.min(initialScrollLeft, slider.scrollWidth - slider.offsetWidth));
+
+    // Scroll to the initial position
+    slider.scrollTo({
+        left: initialScrollLeft,
+        behavior: 'smooth'
+    });
+
+    let mouseDown = false;
+    let startX, startScrollLeft;
+
+    const startDragging = (e) => {
+        mouseDown = true;
+        startX = e.pageX;
+        startScrollLeft = slider.scrollLeft;
+    }
+
+    const stopDragging = (e) => {
+        mouseDown = false;
+    }
+
+    const move = (e) => {
+        e.preventDefault();
+        if (!mouseDown) { return; }
+
+        const currentX = e.pageX;
+        const distance = currentX - startX;
+        const threshold = 5; // Adjust this threshold as needed
+
+        // Determine the direction of the swipe
+        const direction = distance < 0 ? 1 : -1;
+
+        // Check if the distance moved is greater than the threshold
+        if (Math.abs(distance) >= threshold) {
+            // Calculate the new scroll position based on the direction
+            const newScrollLeft = startScrollLeft + (slider.clientWidth * direction);
+
+            // Update the scroll position
+            slider.scrollTo({
+                left: newScrollLeft,
+                behavior: 'smooth' // Add smooth scrolling effect
+            });
+
+            // Reset mouseDown and startX to prevent continuous scrolling
+            mouseDown = false;
+            startX = currentX;
+        }
+    }
+
+    // Add the event listeners
+    slider.addEventListener('mousemove', move, false);
+    slider.addEventListener('mousedown', startDragging, false);
+    slider.addEventListener('mouseup', stopDragging, false);
+    slider.addEventListener('mouseleave', stopDragging, false);
+});
+
+
+document.addEventListener('DOMContentLoaded', function() {
     const carouselContainer = document.getElementById('carouselContainer');
     const items = carouselContainer.children;
     const firstItem = items[0].cloneNode(true);
@@ -161,7 +234,7 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 function changeImage() {
-    var images = ['../assets/365paws.png' , '../assets/drivermate-img.png' ,'../assets/fabric-img.png']; // Array of image sources
+    var images = [ '../assets/cover1.png','../assets/cover2.png','../assets/cover3.png','../assets/cover4.png' ]; // Array of image sources
     var currentIndex = 0; // Start index
     
     setInterval(function() {
@@ -175,3 +248,27 @@ function changeImage() {
   // Call the function to initiate the change
 document.addEventListener('DOMContentLoaded', changeImage);
 
+$(function() {
+    $("#myImg").hover(
+        function() {
+            $(this).attr("src", "../assets/animatedgif.gif");
+        },
+        function() {
+            $(this).attr("src", "../assets/staticimage.jpg");
+        }                         
+    );                  
+});
+$(document).ready(function() {
+    // Hide myImg initially
+    $("#myImg").hide();
+
+    // Show myImg on hover over .services-box
+    $(".heading").hover(
+        function() {
+            $("#myImg").show();
+        },
+        function() {
+            $("#myImg").hide();
+        }
+    );
+});

@@ -15,7 +15,11 @@ module.exports = {
       fontFamily:{
         poppins : "'Poppins' , sans-serif",
         dmsans : "'DM Sans' , sans-serif",
-        helvetica : ['HELVETICA' , 'sans-serif']
+        helvetica : ['HELVETICA' , 'sans-serif'],
+        helveticalight : ['HELVETICA-LIGHT' , 'sans-serif'],
+        couture : ['COUTURE' , 'sans-serif'],
+        recoleta: ['RECOLETA' , 'sans-serif']
+
       },
       animation:{
         slidein: "slidein 1s ease 300ms;",
