@@ -247,28 +247,59 @@ function changeImage() {
   
   // Call the function to initiate the change
 document.addEventListener('DOMContentLoaded', changeImage);
+$(document).ready(function() {
+    // Hide myImg1 initially
+    $("#myImg1").hide();
 
-$(function() {
-    $("#myImg").hover(
+    // Show myImg1 on hover over the first .heading element
+    $(".heading:first").hover(
         function() {
-            $(this).attr("src", "../assets/animatedgif.gif");
+            $("#myImg1").show();
         },
         function() {
-            $(this).attr("src", "../assets/staticimage.jpg");
-        }                         
-    );                  
+            $("#myImg1").hide();
+        }
+    );
 });
 $(document).ready(function() {
-    // Hide myImg initially
-    $("#myImg").hide();
+    // Hide myImg2 initially
+    $("#myImg2").hide();
 
-    // Show myImg on hover over .services-box
-    $(".heading").hover(
+    // Show myImg2 on hover over the second .heading element
+    $(".heading:eq(1)").hover(
         function() {
-            $("#myImg").show();
+            $("#myImg2").show();
         },
         function() {
-            $("#myImg").hide();
+            $("#myImg2").hide();
+        }
+    );
+});
+$(document).ready(function() {
+    // Hide myImg2 initially
+    $("#myImg3").hide();
+
+    // Show myImg2 on hover over the second .heading element
+    $(".heading:eq(2)").hover(
+        function() {
+            $("#myImg3").show();
+        },
+        function() {
+            $("#myImg3").hide();
+        }
+    );
+});
+$(document).ready(function() {
+    // Hide myImg2 initially
+    $("#myImg5").hide();
+
+    // Show myImg2 on hover over the second .heading element
+    $(".heading:eq(4)").hover(
+        function() {
+            $("#myImg5").show();
+        },
+        function() {
+            $("#myImg5").hide();
         }
     );
 });

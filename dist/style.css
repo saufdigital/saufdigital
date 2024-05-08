@@ -1870,25 +1870,70 @@ html {
 }
 
 .heading {
-  padding-top: 50px;
+  text-decoration: underline;
+  padding-top: 30px;
   padding-left: 20px;
   padding-right: 10px;
   position: absolute;
   bottom: 0px;
   /* Adjust the bottom distance as needed */
-  left: 20px;
-  /* Adjust the left distance as needed */
   transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
   /* Transition for heading */
 }
 
-#myImg {
+#myImg1 {
   position: absolute;
-  right: 50%;
-  top: 20%;
+  right: 40%;
+  top: 10%;
   width: 40%;
   height: 40%;
-  background-image: url("../assets/staticimage.jpg");
+  border-radius: 10%;
+  background-image: url("../assets/animatedgif.gif");
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+  display: none;
+  /* Hide initially */
+}
+
+#myImg2 {
+  position: absolute;
+  right: 40%;
+  top: 10%;
+  width: 40%;
+  height: 40%;
+  border-radius: 10%;
+  background-image: url("../assets/giphy2.gif");
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+  display: none;
+  /* Hide initially */
+}
+
+#myImg3 {
+  position: absolute;
+  right: 40%;
+  top: 10%;
+  width: 40%;
+  height: 40%;
+  border-radius: 10%;
+  background-image: url("../assets/giphy3.gif");
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+  display: none;
+  /* Hide initially */
+}
+
+#myImg5 {
+  position: absolute;
+  right: 40%;
+  top: 10%;
+  width: 40%;
+  height: 40%;
+  border-radius: 10%;
+  background-image: url("../assets/giphy5.gif");
   background-size: cover;
   background-position: center;
   z-index: 1;
@@ -1900,10 +1945,8 @@ html {
   padding-left: 20px;
   padding-right: 10px;
   position: absolute;
-  bottom: 10px;
+  bottom: 15%;
   /* Adjust the bottom distance as needed */
-  left: 20px;
-  /* Adjust the left distance as needed */
   color: black;
   /* Description text color */
 }
@@ -2228,5 +2271,15 @@ html {
 
   .tablet\:text-\[75px\] {
     font-size: 75px;
+  }
+}
+
+@media (min-width: 1340px) {
+  .min-\[1340px\]\:max-h-96 {
+    max-height: 24rem;
+  }
+
+  .min-\[1340px\]\:w-96 {
+    width: 24rem;
   }
 }
