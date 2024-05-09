@@ -2282,4 +2282,16 @@ html {
   .min-\[1340px\]\:w-96 {
     width: 24rem;
   }
+
+  .min-\[1340px\]\:w-5\/6 {
+    width: 83.333333%;
+  }
+
+  .min-\[1340px\]\:min-w-96 {
+    min-width: 24rem;
+  }
+
+  .min-\[1340px\]\:min-w-full {
+    min-width: 100%;
+  }
 }
