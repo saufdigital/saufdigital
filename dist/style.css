@@ -2036,6 +2036,12 @@ html {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
+.group:hover .group-hover\:scale-\[20\] {
+  --tw-scale-x: 20;
+  --tw-scale-y: 20;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
 .group:hover .group-hover\:border {
   border-width: 1px;
 }
@@ -2316,6 +2322,11 @@ html {
   .min-\[1340px\]\:text-4xl {
     font-size: 2.25rem;
     line-height: 2.5rem;
+  }
+
+  .min-\[1340px\]\:text-3xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
   }
 
   .min-\[1340px\]\:leading-relaxed {
