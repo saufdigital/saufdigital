@@ -170,26 +170,20 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
-
-document.addEventListener("DOMContentLoaded", function() {
-    var menuButton = document.querySelector('.menu-button');
-    var dropdownContent = document.querySelector('.dropdown-content');
+$(document).on("scroll", function() {
+    var pageTop = $(document).scrollTop();
+    var pageBottom = pageTop + $(window).height();
+    var tags = $(".tag");
   
-    menuButton.addEventListener('click', function() {
-      dropdownContent.classList.toggle('show');
-    });
+    for (var i = 0; i < tags.length; i++) {
+      var tag = tags[i];
   
-    dropdownContent.addEventListener('click', function(event) {
-      if (event.target.tagName === 'a') {
-        dropdownContent.classList.remove('show');
+      if ($(tag).position().top < pageBottom) {
+        $(tag).addClass("visible");
+      } else {
+        $(tag).removeClass("visible");
       }
-    });
-  
-    document.addEventListener('click', function(event) {
-      if (!dropdownContent.contains(event.target) && !menuButton.contains(event.target)) {
-        dropdownContent.classList.remove('show');
-      }
-    });
+    }
   });
   
 

@@ -1,7 +1,24 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-html { scroll-behavior: smooth; }
+
+html { scroll-behavior: smooth;
+ }
+ .tag {
+}
+
+.tag {
+  opacity: 0;
+  transform: translate(0, 10vh);
+  transition: all 2s;
+}
+
+.tag.visible {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+
 .changeimage {
 	width: 100%;
 	animation: change-img-anim 6s infinite;
@@ -354,6 +371,7 @@ html { scroll-behavior: smooth; }
 .dropdown-content {
   display: none;
   left: 50%;
+  top: 15%;
   transform: translateX(-50%);
   position: fixed;
   background-color: #f9f9f9;
@@ -362,6 +380,8 @@ html { scroll-behavior: smooth; }
   max-width: 400px; /* Adjust the maximum width as needed */
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
   z-index: 1;
+  
+
 }
 
 .dropdown-content a {
