@@ -339,3 +339,57 @@ html { scroll-behavior: smooth; }
 .services-box:hover .description {
   color: white; /* Change description text color on hover */
 }
+.menu-container {
+  position: relative;
+  display: inline-block;
+}
+
+.menu-button {
+  color: black;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+.dropdown-content {
+  display: none;
+  left: 50%;
+  transform: translateX(-50%);
+  position: fixed;
+  background-color: #f9f9f9;
+  width: 90%; /* Adjust the width as needed */
+  height: 100%;
+  max-width: 400px; /* Adjust the maximum width as needed */
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 16px 16px;
+  text-decoration: none;
+  display: block;
+  font-size: 32px;
+  text-align: center;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.menu-container:hover .dropdown-content {
+  display: block;
+  animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    height: 0;
+  }
+  to {
+    height: 100%;
+  }
+}
+.show {
+  display: block;
+}

@@ -170,37 +170,28 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
 document.addEventListener("DOMContentLoaded", function() {
-    const menuButton = document.getElementById("menuButton");
-    const dialogBox = document.getElementById("dialogBox");
-    const line = document.getElementById("line");
-    const menubox = document.getElementById("menubox");
-    const startbutton = document.getElementById("startbutton");
-
-    // Function to show or hide the dialog box with smooth transitions
-    function toggleDialogBox() {
-        if (dialogBox.classList.contains("hidden")) {
-            dialogBox.classList.remove("hidden");
-            line.classList.add("hidden");
-        } else {
-            line.classList.remove("hidden");
-                dialogBox.classList.add("hidden");
-        }
-    }
-    // Event listener for the menu button
-    menuButton.addEventListener("click", function(event) {
-        event.stopPropagation(); // Prevents the click event from propagating to the document
-        toggleDialogBox();
+    var menuButton = document.querySelector('.menu-button');
+    var dropdownContent = document.querySelector('.dropdown-content');
+  
+    menuButton.addEventListener('click', function() {
+      dropdownContent.classList.toggle('show');
     });
-
-    // Event listener for clicks outside the dialog box
-    document.addEventListener("click", function(event) {
-        if (!menubox.contains(event.target) && !startbutton.contains(event.target) && event.target !== menuButton) {
-            line.classList.remove("hidden");
-                dialogBox.classList.add("hidden");
-        }
+  
+    dropdownContent.addEventListener('click', function(event) {
+      if (event.target.tagName === 'a') {
+        dropdownContent.classList.remove('show');
+      }
     });
-});
+  
+    document.addEventListener('click', function(event) {
+      if (!dropdownContent.contains(event.target) && !menuButton.contains(event.target)) {
+        dropdownContent.classList.remove('show');
+      }
+    });
+  });
+  
 
 document.addEventListener("DOMContentLoaded", function() {
     // Function to move to the next element
