@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+      <link rel="stylesheet" href="style.css">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+      <link rel="icon" href="../assets//saufdigitallogo.png" type="image/icon type">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+   </head>
+   <body class="px-[20px] laptop:px-[60px] font-helvetica bg-[#Fffdf6] overflow-x-hidden ">
+      <header class="flex justify-between py-4 laptop:items-end items-center mt-4 bg-inherit">
+         <div class="w-[130px] h-[40px] ml-[20px] laptop:ml-[12px] laptop:w-[173.72px] h-[56.49px] ">
+            <a href="./index.html">
+            <img src="../assets/saufdigitallogo.png" alt=""></a>
+         </div>
+         <div class="tablet:hidden menu-container">
+            <button class="menu-button"><img src="../assets/more.png" alt="" class="w-6 h-6"></button>
+            <div id="dropdown-content" class="dropdown-content font-recoleta font-bold w-full  ">
+               <a href="./about.html">About</a>
+               <a href="#work">Work</a>
+               <a href="#contact">Contact</a>
+               <a href="#blog">Blog</a>
+               <a href="" class="mt-12">
+                  <button href="#_" class="relative inline-flex items-center justify-center p-4 px-8 py-3 overflow-hidden font-medium text-black transition duration-300 ease-out border-2 border-sauforange rounded-full shadow-md group">
+                     <span class="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-sauforange group-hover:translate-x-0 ease">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                        </svg>
+                     </span>
+                     <span class="absolute flex items-center justify-center w-full h-full text-sauforange transition-all duration-300 transform group-hover:translate-x-full ease">Start a Project</span>
+                     <span class="relative invisible">Start a Project</span>
+                  </button>
+               </a>
+            </div>
+        </div>
+        
+         <div class="relative max-tablet:hidden grid grid-cols-4 gap-x-4 font-bold ">
+            <button class="navbutton" > <a href="./about.html">About</a></button>
+            <button class="navbutton"><a href="#work">Work</a> </button>
+            <button class="navbutton "><a href="#contact">Contact</a> </button>
+            <button class="navbutton "><a href="#blogs">Blog</a></button>
+         </div>
+      </header>      
+      <div class="border-t border-orange-600 mx-2" id="line"></div>
+      <div class="tablet:flex h-96 tablet:h-screen items-center my-8 ">
+        <img src="../assets/thankyou-image.png" alt="" class="h-72 m-auto">
+        <div class="m-auto ">
+            <h1 class="w-full  text-center text-5xl font-bold text-sauforange mb-8">Thank You 💖</h1>
+            <p class="w-full  text-center text-lg font-medium text-[#444545] mb-8">We have recieved your Email and will be contacting you soon !</p>           
+            <div class="flex flex-col items-center ">
+            <a href="./index.html" class=" relative inline-flex items-center justify-center inline-block p-4  py-3 overflow-hidden font-medium text-indigo-600 rounded-lg shadow-2xl group">
+                <span class="absolute top-0 left-0 w-40 h-40 -mt-10 -ml-3 transition-all duration-700 bg-red-500 rounded-full blur-md ease"></span>
+                <span class="absolute inset-0 w-full h-full transition duration-700 group-hover:rotate-180 ease">
+                <span class="absolute bottom-0 left-0 w-24 h-24 -ml-10 bg-orange-500 rounded-full blur-md"></span>
+                <span class="absolute bottom-0 right-0 w-24 h-24 -mr-10 bg-yellow-500 rounded-full blur-md"></span>
+                </span>
+                <span class="relative text-white">Go Home</span>
+                </a>
+            </div>
+        </div>
+      </div>
+      
+      <div class=" tag laptop:-mx-16 p-4 h-screen mt-2 laptop:mt-4">
+      <div class=" grid grid-cols-10 tablet:grid-cols-14 laptop:grid-cols-10">
+      <img src="../assets/saufdigitallogo.png" alt="" class="col-span-10 tablet:col-span-3 laptop:mx-12 my-4">
+      <ul class="col-span-5 tablet:col-span-2 my-4">
+         <li class="pb-4 navbutton"><a href="./index.html">Home</a></li>
+         <li class="pb-4 navbutton"><a href="#work">Work</a> </li>
+         <li class="pb-4 navbutton"><a href="./about.html">About</a></li>
+         <li class="pb-4 navbutton"><a href="#blogs">Blog</a> </li>
+      </ul>
+      <ul class="col-span-5 tablet:col-span-2 my-4">
+         <li class="pb-4 navbutton"><a target=”_blank” href="https://www.linkedin.com/company/sauf-digital">Linkedin</a> </li>
+         <li class="pb-4 navbutton"><a  target=”_blank” href="https://www.instagram.com/saufdigital/">Instagram</a></li>
+         <li class="pb-4 navbutton"><a target=”_blank”  href="https://www.facebook.com/saufdigital">Facebook</a> </li>
+      </ul>
+      <ul class="col-span-10 tablet:col-span-3 my-4">
+         <li class="pb-4 navbutton">Privacy Policy</li>
+         <li class="pb-4 navbutton">Terms & Conditions</li>
+         <div class=" flex flex-col  max-laptop:items-center mt-4 ">
+            <div class="laptop:text-[16px] flex gap-2 font-bold font-dmsans max-md:items-center ">
+               REVIEWED ON 
+               <div class="flex items-center">
+                  <svg class="w-4 h-4 text-[#FFBB37] ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                     <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                  </svg>
+                  <svg class="w-4 h-4 text-[#FFBB37] ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                     <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                  </svg>
+                  <svg class="w-4 h-4 text-[#FFBB37] ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                     <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                  </svg>
+                  <svg class="w-4 h-4 text-[#FFBB37] ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                     <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                  </svg>
+                  <svg class="w-4 h-4 ms-1 text-[#FFBB37]" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                     <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                  </svg>
+               </div>
+            </div>
+            <div class="flex items-center gap-4 laptop:mt-[12px] ">
+               <img src="../assets/upwork-logo.png" alt="" class=" h-[25px]">
+               <p class="font-bold text-[16px] font-dmsans">50+ REVIEWS</p>
+            </div>
+            <div class=" flex flex-col mt-4 ">
+               <div class="laptop:text-[16px] flex gap-2 font-bold font-dmsans">
+                  REVIEWED ON 
+                  <div class="flex items-center">
+                     <svg class="w-4 h-4 text-[#FFBB37] ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                        <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                     </svg>
+                     <svg class="w-4 h-4 text-[#FFBB37] ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                        <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                     </svg>
+                     <svg class="w-4 h-4 text-[#FFBB37] ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                        <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                     </svg>
+                     <svg class="w-4 h-4 text-[#FFBB37] ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                        <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                     </svg>
+                     <svg class="w-4 h-4 ms-1 text-[#FFBB37]" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                        <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                     </svg>
+                  </div>
+               </div>
+               <div class="flex items-center gap-4 laptop:mt-[12px] ">
+                  <img src="../assets/fiverr-logo.png" alt="" class=" h-[25px]">
+                  <p class="font-bold text-[16px] font-dmsans">100+ REVIEWS</p>
+               </div>
+      </ul>
+      </div>
+      <div class="w-full flex flex-col items-center">
+      <div class="laptop:flex justify-between items-center p-8   h-fit text-white bg-sauforange  mt-8 rounded-lg w-full laptop:w-5/6">
+      <p class="font-recoleta max-laptop:text-center max-laptop:mb-4 text-4xl laptop:text-5xl">Lets have a chat</p>       
+      <a href="#_" class="text-sm bg-white  max-laptop:flex flex-col items-center relative inline-flex items-center justify-center p-4 px-8 py-3 overflow-hidden font-medium text-black transition duration-300 ease-out border-2 border-white rounded-full shadow-md group">
+      <span class="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-sauforange group-hover:translate-x-0 ease">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+      </span>
+      <span class="absolute flex items-center justify-center w-full h-full text-sauforange transition-all duration-300 transform group-hover:translate-x-full ease">Send Message</span>
+      <span class="relative invisible">Send Message</span>
+      </a>      
+      </div>
+      </div>
+      <div class="max-laptop:flex flex-col items-center w-full laptop:text-end p-4 relative text-xs laptop:text-sm  laptop:-bottom-20  laptop:right-10 ">
+      ©2024 SAUF DIGITAL ALL RIGHTS RESERVED
+      </div>
+      </div>
+      <script src="script.js"></script>
+   </body>
+</html>

@@ -368,19 +368,17 @@ html { scroll-behavior: smooth;
   border-radius: 4px;
 }
 .dropdown-content {
+  
   display: none;
   left: 50%;
-  top: 15%;
+  top:10%;
   transform: translateX(-50%);
   position: fixed;
-  background-color: #f9f9f9;
-  width: 90%; /* Adjust the width as needed */
+  background-color: #f6cfb1;
+  width: 100%; /* Adjust the width as needed */
   height: 100%;
-  max-width: 400px; /* Adjust the maximum width as needed */
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
   z-index: 1;
-  
-
 }
 
 .dropdown-content a {

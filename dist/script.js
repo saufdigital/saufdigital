@@ -185,7 +185,35 @@ $(document).on("scroll", function() {
       }
     }
   });
-  
+
+  document.addEventListener('DOMContentLoaded', function() {
+    const dropdownContent = document.getElementById('dropdown-content');
+    const links = dropdownContent.getElementsByTagName('a');
+
+    for (let i = 0; i < links.length; i++) {
+        links[i].addEventListener('click', function() {
+            dropdownContent.style.display = 'none';
+        });
+    }
+
+    // Optional: Close the dropdown if clicking outside of it
+    document.addEventListener('click', function(event) {
+        if (!dropdownContent.contains(event.target) && !event.target.closest('.menu-button')) {
+            dropdownContent.style.display = 'none';
+        }
+    });
+
+    // Optional: Toggle the dropdown visibility when clicking the menu button
+    const menuButton = document.querySelector('.menu-button');
+    menuButton.addEventListener('click', function(event) {
+        event.stopPropagation();
+        if (dropdownContent.style.display === 'block' || dropdownContent.style.display === '') {
+            dropdownContent.style.display = 'none';
+        } else {
+            dropdownContent.style.display = 'block';
+        }
+    });
+});
 
 document.addEventListener("DOMContentLoaded", function() {
     // Function to move to the next element
@@ -219,7 +247,7 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 function changeImage() {
-    var images = [ '../assets/cover1.png','../assets/cover2.png','../assets/cover3.png','../assets/cover4.png' ]; // Array of image sources
+    var images = [ '../assets/cover1.png','../assets/cover2.png','../assets/cover3.png','../assets/cover4.png' , '../assets/cover5.png','../assets/cover6.png' , '../assets/cover7.png']; // Array of image sources
     var currentIndex = 0; // Start index
     
     setInterval(function() {
@@ -287,4 +315,59 @@ $(document).ready(function() {
             $("#myImg5").hide();
         }
     );
+});
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const services = document.querySelectorAll('.service');
+    const descriptionDiv = document.getElementById('service-description');
+
+    services.forEach(service => {
+        service.addEventListener('click', () => {
+            const description = service.getAttribute('data-description');
+            descriptionDiv.textContent = description;
+        });
+    });
+});
+const form = document.getElementById('form');
+window.onload = function() {
+    // Reset the form fields when the page loads
+    document.getElementById("form").reset();
+};
+const result = document.getElementById('result');
+
+form.addEventListener('submit', function(e) {
+  e.preventDefault();
+  const formData = new FormData(form);
+  const object = Object.fromEntries(formData);
+  const json = JSON.stringify(object);
+  result.innerHTML = "Please wait..."
+
+    fetch('https://api.web3forms.com/submit', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            },
+            body: json
+        })
+        .then(async (response) => {
+            let json = await response.json();
+            if (response.status == 200) {
+                result.innerHTML = "Form submitted successfully";
+            } else {
+                console.log(response);
+                result.innerHTML = json.message;
+            }
+        })
+        .catch(error => {
+            console.log(error);
+            result.innerHTML = "Something went wrong!";
+        })
+        .then(function() {
+            form.reset();
+            setTimeout(() => {
+                result.style.display = "none";
+            }, 3000);
+        });
 });
