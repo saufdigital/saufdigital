@@ -3,7 +3,7 @@
    <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Document</title>
+      <title>Sauf Digital</title>
       <link rel="stylesheet" href="style.css">
       <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,10 +23,11 @@
             <div id="dropdown-content" class="dropdown-content font-recoleta font-bold w-full  ">
                <a href="./about.html">About</a>
                <a href="#work">Work</a>
+               <a href="#services">Services</a>
                <a href="#contact">Contact</a>
                <a href="#blog">Blog</a>
-               <a href="" class="mt-12">
-                  <button href="#_" class="relative inline-flex items-center justify-center p-4 px-8 py-3 overflow-hidden font-medium text-black transition duration-300 ease-out border-2 border-sauforange rounded-full shadow-md group">
+               <a href="#contact" class="mt-12">
+                  <button href="#contact" class="relative inline-flex items-center justify-center p-4 px-8 py-3 overflow-hidden font-medium text-black transition duration-300 ease-out border-2 border-sauforange rounded-full shadow-md group">
                      <span class="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-sauforange group-hover:translate-x-0 ease">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
@@ -39,9 +40,10 @@
             </div>
         </div>
         
-         <div class="relative max-tablet:hidden grid grid-cols-4 gap-x-4 font-bold ">
+         <div class="relative max-tablet:hidden grid grid-cols-5 gap-x-4 font-bold ">
             <button class="navbutton" > <a href="./about.html">About</a></button>
             <button class="navbutton"><a href="#work">Work</a> </button>
+            <button class="navbutton"><a href="#services">Services</a> </button>
             <button class="navbutton "><a href="#contact">Contact</a> </button>
             <button class="navbutton "><a href="#blogs">Blog</a></button>
          </div>
@@ -82,7 +84,8 @@
                   </div>
                </div>
                <div class="flex items-center gap-4 laptop:mt-[12px] ">
-                  <img src="../assets/upwork-logo.png" alt="" class="h-[30px]">
+                  <a href="https://www.upwork.com/freelancers/~01970b762ed89ea6ad" target="_blank">
+                  <img src="../assets/upwork-logo.png" alt="" class="h-[30px]"></a>
                   <p class="font-bold text-[16px] font-dmsans">50+ REVIEWS</p>
                </div>
             </div>
@@ -108,7 +111,8 @@
                   </div>
                </div>
                <div class="flex items-center  gap-4 laptop:mt-[11.5px] ">
-                  <img src="../assets/fiverr-logo.png" alt="" class="h-[25px] max-laptop:h-[28px]">
+                  <a href="https://www.fiverr.com/iamsaadatkhan" target="_blank">
+                  <img src="../assets/fiverr-logo.png" alt="" class="h-[25px] max-laptop:h-[28px]"></a>
                   <p class="relative font-bold text-[16px] font-dmsans pt-2 ">100+ REVIEWS</p>
                </div>
             </div>
@@ -126,55 +130,35 @@
             </div>
          </div>
       </div>
-      <!-- <div id="services" class=" tag ">
-         <h2 class="fade-in text-[32px] font-recoleta font-semibold m-2 laptop:text-[48px] mt-16">Services</h2>
-         <ul class="flex gap-4 overflow-x-scroll draggable no-scrollbar mt-8 ">
-            <li class="relative w-full laptop:w-full bg-red-50 h-64 services-box text-black font-recoleta rounded-xl ">
-               <img src="../assets/animatedgif.gif" alt="" id="myImg1">
-               <h2 class="heading text-2xl text-black h-full  align-text-bottom ">Web Development</h2>
-               <p class="w-full font-helvetica description text-sm laptop:text-[16px]">Tailored web development services from design to implementation. Responsive, user-friendly websites crafted to meet your business objectives and captivate audiences.</p>
-            </li>
-            <li class="relative w-full bg-red-50 h-64 services-box text-black font-recoleta rounded-xl ">
-               <img src="../assets/giphy2.gif" alt="" id="myImg2">
-               <h2 class="heading text-2xl text-black h-full  align-text-bottom ">UI UX Design</h2>
-               <p class="w-full font-helvetica  description text-sm laptop:text-[16px]">Expert UI/UX design services: Crafting intuitive, visually appealing interfaces to enhance user experience and drive engagement for your digital products.</p>
-            </li>
-            <li class="relative w-full bg-red-50 h-64 services-box text-black font-recoleta rounded-xl ">
-               <img src="../assets/giphy3.gif" alt="" id="myImg3">
-               <h2 class="heading text-2xl text-black h-full  align-text-bottom ">Branding</h2>
-               <p class="w-full font-helvetica  description text-sm laptop:text-[16px]">Comprehensive branding solutions: Crafting compelling brand identities that resonate with your audience and reflect your unique values and personality.</p>
-            </li>
-            <li class="relative w-full bg-red-50 h-64 services-box text-black font-recoleta rounded-xl ">
-               <h2 class="heading text-2xl text-black h-full  align-text-bottom ">Frontend Development</h2>
-               <p class="description  font-helvetica text-sm laptop:text-[16px]">Building intuitive, responsive interfaces with cutting-edge technologies to enhance user experience and drive engagement on your website or application.</p>
-            </li>
-            <li class="relative w-full bg-red-50 h-64 services-box text-black font-recoleta rounded-xl">
-               <img src="../assets/giphy5.gif" alt="" id="myImg5">
-               <h2 class="heading text-2xl text-black h-full  align-text-bottom ">Backend Development</h2>
-               <p class="description  font-helvetica text-sm laptop:text-[16px]">Creating scalable, secure, and efficient server-side solutions to power your website or application, ensuring seamless functionality and performance.</p>
-            </li>
-         </ul>
-      </div> -->
-
-      <div id="services ">
-         <h2>Services</h2>
-         <div class="flex ">
-            <div class="w-1/2 ml-4" >
-               <div class="w-full bg-gray-100  p-4 mb-4 service" data-description="Description for Website Development 1">
-                  Website Development
+     
+      <div id="services" class="tag">
+         <h2 class=" text-[32px] font-recoleta font-semibold m-2 laptop:text-[48px] mt-16">Services</h2>
+         <div class="tablet:flex">
+             <div class=" tablet:w-1/2 tablet:mr-4 max-tablet:grid grid-cols-3 gap-2">
+                 <div class="w-full bg-gray-100 p-4 px-2 mb-4  rounded-lg service selected " data-description="Our website development services provide you with a custom, responsive website tailored to your needs. We focus on intuitive design, robust functionality, and a seamless user experience. Your site will be visually appealing, easy to manage, and optimized for performance, helping you effectively engage and grow your audience."  data-bg-image="url('../assets/service-bg1.jpg')">
+                     Website Development
+                 </div>
+                 <div class="w-full bg-gray-100 p-4 mb-4 service rounded-lg" data-description="We focus on creating interfaces that are intuitive, visually appealing, and user-friendly. Our approach integrates user research, wireframing, and prototyping to ensure seamless navigation and optimal user experience. We strive to balance aesthetics with functionality, crafting designs that resonate with users while meeting the goals of the project." data-bg-image="url('../assets/service-bg2.jpg')">
+                     UI UX Design
+                 </div>
+                 <div class="w-full bg-gray-100 p-4 mb-4 service rounded-lg" data-description="With our branding services, you receive strategic brand development tailored to your target audience. We deliver memorable visual assets, including logos and color schemes, ensuring consistent representation across all channels. Our comprehensive brand guidelines empower you to maintain brand integrity, supported by strategic consultations for continued growth and differentiation in the market." data-bg-image="url('../assets/service-bg3.jpg')">
+                     Branding
+                 </div>
+                 <div class="w-full bg-gray-100 p-4 mb-4 service rounded-lg" data-description="With our SaaS application development services, you receive a scalable, secure, and high-performing solution tailored to your business needs. We focus on intuitive user interfaces, robust functionality, and seamless integration with existing systems. Our expertise ensures reliable performance and continuous support, enabling you to deliver exceptional service to your users." data-bg-image="url('../assets/service-bg3.jpg')">
+                  SAAS Application
+                  </div>
+                  <div class="w-full bg-gray-100 p-4 px-2 mb-4 service rounded-lg" data-description="With our WebFlow and WordPress development services, you receive a custom-built, responsive website tailored to your needs. We ensure seamless functionality, intuitive design, and easy content management. Our expertise guarantees a visually appealing, user-friendly site with optimized performance, empowering you to effectively manage and grow your online presence." data-bg-image="url('../assets/service-bg3.jpg')">
+                     WebFlow / Wordpress Development
+                     </div>
+             </div>
+             <div class="w-full h-96  tablet:h-96	  bg-center p-8 bg-[#Fffdf6]  " id="service-description" style="background-image: url('../assets/service-bg1.jpg');">
+                 <div class="bg-[#Fffdf6]  p-4 h-full ">
+                  <h2 class="text-3xl font-bold">Website Development</h2>
+                 <p class=" text-sm tablet:text-xl mt-2 tablet:mt-4 ">We assist with website development by offering planning and strategy services, creating user-friendly and visually appealing designs, and building robust websites using the latest technologies. Our services also include setting up content management systems like WordPress and developing secure e-commerce platforms.</p>
                </div>
-               <div class="w-full bg-gray-100  p-4 service" data-description="Description for Website Development 2">
-                  Website Development
                </div>
-               <div class="w-full bg-gray-100  p-4 service" data-description="Description for Website Development 3">
-                  Website Development
-               </div>
-            </div>
-            <div class="h-full w-full bg-red-100 " id="service-description">
-               
-            </div>
          </div>
-      </div>
+     </div>
 
       <div  id="work" class=" tag fade-in text-[32px] font-recoleta font-semibold m-2 laptop:text-[48px] mt-16">
          Our Projects
@@ -284,13 +268,13 @@
                <div class="border-t border-white "></div>
                <ul id ="listContainer" class=" flex snap-x snap-mandatory w-full h-fit  overflow-x-auto no-scrollbar mt-8 " id="">
                   <li class="snap-center m-12 mx-4 flex-shrink-0 h-full w-full m-4 ">
-                     <p class="text-[12px] laptop:text-[16px] text-white font-medium">Saifullah successfully created 3 separate python files to help us scrape our target sites for data. He was also patient and communicative about how to run the file and made updates when requested. </p>
+                     <p class="text-[12px] laptop:text-[16px] text-white font-medium">They delivered great UI/UX work on this project and I enjoyed working with them. Their communication was top-notch, they met all deadlines, their skills were reasonably strong, and they worked with other team members. At one point I asked for an additional milestone and they were very helpful and enthusiastic in making the additions. I enjoyed working with them and will likely have additional jobs for them in the future. </p>
                      <div class="flex gap-4 mt-12">
                         <div class="rounded-full bg-black w-6  h-6 laptop:h-12 laptop:w-12 ">
                            <img src="../assets/man3.png" alt=""  class="w-full h-full flex flex-col items-center">
                         </div>
                         <div>
-                           <div class="text-[12px]  laptop:text-[16px] text-white">John Wick</div>
+                           <div class="text-[12px]  laptop:text-[16px] text-white">Scott Taylor</div>
                            <div class="text-[8px] laptop:text-[12px] text-white">Assistant Manager at Sauf Digital</div>
                         </div>
                      </div>
@@ -346,13 +330,13 @@
          <div class=" relative flex  flex-col justify-center overflow-hidden py-6 px-2  laptop:px-0 sm:py-12">
             <div
                class="group relative rounded-lg cursor-pointer overflow-hidden bg-[#f1f1f1] px-6 pt-10 pb-8  ring-1 ring-gray-900/5 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl sm:mx-auto sm:max-w-sm sm:rounded-lg sm:px-10">
-               <span class="absolute top-10 z-0 h-20 w-20 rounded-full bg-sauforange transition-all duration-300 group-hover:scale-[10]"></span>
+               <span class="absolute top-10  z-0 h-20 w-20 rounded-full bg-sauforange transition-all duration-300 group-hover:scale-[20]"></span>
                <div class="relative z-10 mx-auto max-w-md">
                   <span class="grid h-20 w-20 place-items-center rounded-full bg-black transition-all duration-300 group-hover:bg-sauforange group-hover:border border-white border-4">
                      <img src="../assets/linkedin-logo.png" alt="" class="w-8 h-8">
                   </span>
                   <div
-                     class="space-y-6 pt-5 text-lg leading-7 text-gray-600 transition-all duration-300 group-hover:text-white/90">
+                     class="space-y-6 pt-5 text-xl leading-7 text-gray-600 transition-all duration-300 group-hover:text-white/90">
                      <p>5 Signs You Need a Website Makeover in 2024
                      </p>
                   </div>
@@ -370,7 +354,7 @@
          <div class=" relative flex  flex-col justify-center overflow-hidden py-6 px-2  laptop:px-0 sm:py-12">
             <div
                class="group relative rounded-lg cursor-pointer overflow-hidden bg-[#f1f1f1] px-6 pt-10 pb-8  ring-1 ring-gray-900/5 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl sm:mx-auto sm:max-w-sm sm:rounded-lg sm:px-10">
-               <span class="absolute top-10 z-0 h-20 w-20 rounded-full bg-sauforange transition-all duration-300 group-hover:scale-[10]"></span>
+               <span class="absolute top-10 z-0 h-20 w-20 rounded-full bg-sauforange transition-all duration-300 group-hover:scale-[20]"></span>
                <div class="relative z-10 mx-auto max-w-md">
                   <span class="grid h-20 w-20 place-items-center rounded-full bg-black transition-all duration-300 group-hover:bg-sauforange group-hover:border border-white border-4">
                      <img src="../assets/linkedin-logo.png" alt="" class="w-8 h-8">
@@ -379,8 +363,8 @@
                         </svg> -->
                   </span>
                   <div
-                     class="space-y-6 pt-5 text-lg leading-7 text-gray-600 transition-all duration-300 group-hover:text-white/90">
-                     <p>
+                     class="space-y-6 pt-5 text-xl leading-7 text-gray-600 transition-all duration-300 group-hover:text-white/90">
+                  <p>
                         Empowering Change through Creativity and Innovation
                      </p>
                   </div>
@@ -397,7 +381,7 @@
          <div class=" relative flex  flex-col justify-center overflow-hidden py-6 px-2  laptop:px-0 sm:py-12">
             <div
                class="group relative rounded-lg cursor-pointer overflow-hidden bg-[#f1f1f1] px-6 pt-10 pb-8  ring-1 ring-gray-900/5 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl sm:mx-auto sm:max-w-sm sm:rounded-lg sm:px-10">
-               <span class="absolute top-10 z-0 h-20 w-20 rounded-full bg-sauforange transition-all duration-300 group-hover:scale-[10]"></span>
+               <span class="absolute top-10 z-0 h-20 w-20 rounded-full bg-sauforange transition-all duration-300 group-hover:scale-[20]"></span>
                <div class="relative z-10 mx-auto max-w-md">
                   <span class="grid h-20 w-20 place-items-center rounded-full bg-black transition-all duration-300 group-hover:bg-sauforange group-hover:border border-white border-4">
                      <img src="../assets/linkedin-logo.png" alt="" class="w-8 h-8">
@@ -406,7 +390,7 @@
                         </svg> -->
                   </span>
                   <div
-                     class="space-y-6 pt-5 text-lg leading-7 text-gray-600 transition-all duration-300 group-hover:text-white/90">
+                     class="space-y-6 pt-5 text-xl leading-7 text-gray-600 transition-all duration-300 group-hover:text-white/90">
                      <p>How to stay ahead of the curve in web design.
                      </p>
                   </div>
@@ -428,6 +412,7 @@
       <ul class="col-span-5 tablet:col-span-2 my-4">
          <li class="pb-4 navbutton"><a href="./index.html">Home</a></li>
          <li class="pb-4 navbutton"><a href="#work">Work</a> </li>
+         <li class="pb-4 navbutton"><a href="#services">Services</a>  </li>
          <li class="pb-4 navbutton"><a href="./about.html">About</a></li>
          <li class="pb-4 navbutton"><a href="#blogs">Blog</a> </li>
       </ul>
@@ -437,8 +422,8 @@
          <li class="pb-4 navbutton"><a target=”_blank”  href="https://www.facebook.com/saufdigital">Facebook</a> </li>
       </ul>
       <ul class="col-span-10 tablet:col-span-3 my-4">
-         <li class="pb-4 navbutton">Privacy Policy</li>
-         <li class="pb-4 navbutton">Terms & Conditions</li>
+         <li class="pb-4 navbutton"><a href="./privacypolicy.html"> Privacy Policy </a></li>
+         <li class="pb-4 navbutton"><a href="./terms.html"> Terms & Conditions </a></li>
          <div class=" flex flex-col  max-laptop:items-center mt-4 ">
             <div class="laptop:text-[16px] flex gap-2 font-bold font-dmsans max-md:items-center ">
                REVIEWED ON 
@@ -461,7 +446,8 @@
                </div>
             </div>
             <div class="flex items-center gap-4 laptop:mt-[12px] ">
-               <img src="../assets/upwork-logo.png" alt="" class=" h-[25px]">
+               <a href="https://www.upwork.com/freelancers/~01970b762ed89ea6ad" target="_blank">
+               <img src="../assets/upwork-logo.png" alt="" class=" h-[25px]"></a>
                <p class="font-bold text-[16px] font-dmsans">50+ REVIEWS</p>
             </div>
             <div class=" flex flex-col mt-4 ">
@@ -486,7 +472,8 @@
                   </div>
                </div>
                <div class="flex items-center gap-4 laptop:mt-[12px] ">
-                  <img src="../assets/fiverr-logo.png" alt="" class=" h-[25px]">
+                  <a href="https://www.fiverr.com/iamsaadatkhan" target="_blank">
+                  <img src="../assets/fiverr-logo.png" alt="" class=" h-[25px]"></a>
                   <p class="font-bold text-[16px] font-dmsans">100+ REVIEWS</p>
                </div>
       </ul>
@@ -494,7 +481,7 @@
       <div class="w-full flex flex-col items-center">
       <div class="laptop:flex justify-between items-center p-8   h-fit text-white bg-sauforange  mt-8 rounded-lg w-full laptop:w-5/6">
       <p class="font-recoleta max-laptop:text-center max-laptop:mb-4 text-4xl laptop:text-5xl">Lets have a chat</p>       
-      <a href="#_" class="text-sm bg-white  max-laptop:flex flex-col items-center relative inline-flex items-center justify-center p-4 px-8 py-3 overflow-hidden font-medium text-black transition duration-300 ease-out border-2 border-white rounded-full shadow-md group">
+      <a href="#contact" class="text-sm bg-white  max-laptop:flex flex-col items-center relative inline-flex items-center justify-center p-4 px-8 py-3 overflow-hidden font-medium text-black transition duration-300 ease-out border-2 border-white rounded-full shadow-md group">
       <span class="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-sauforange group-hover:translate-x-0 ease">
       <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
       </span>

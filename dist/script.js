@@ -321,14 +321,31 @@ $(document).ready(function() {
 document.addEventListener('DOMContentLoaded', () => {
     const services = document.querySelectorAll('.service');
     const descriptionDiv = document.getElementById('service-description');
+    const descriptionText = descriptionDiv.querySelector('p');
+    const descriptionHeading = descriptionDiv.querySelector('h2');
 
     services.forEach(service => {
         service.addEventListener('click', () => {
             const description = service.getAttribute('data-description');
-            descriptionDiv.textContent = description;
+            const gradient = service.getAttribute('data-bg-image');
+
+            descriptionHeading.textContent = service.textContent.trim();
+            descriptionText.textContent = description;
+            descriptionDiv.style.backgroundImage = gradient;
         });
     });
 });
+
+document.querySelectorAll('.service').forEach(item => {
+    item.addEventListener('click', event => {
+        // Remove 'selected' class from all items
+        document.querySelectorAll('.service').forEach(el => el.classList.remove('selected'));
+        // Add 'selected' class to the clicked item
+        event.currentTarget.classList.add('selected');
+    });
+});
+
+
 const form = document.getElementById('form');
 window.onload = function() {
     // Reset the form fields when the page loads

@@ -40,6 +40,28 @@ html { scroll-behavior: smooth;
   src: url('../fonts/Recoleta-RegularDEMO.otf')
 }
 }
+@layer utilities {
+  .scrollbar::-webkit-scrollbar {
+    width: 20px;
+    height: 20px;
+  }
+
+  .scrollbar::-webkit-scrollbar-track {
+    border-radius: 100vh;
+    background: #FF4800;
+  }
+
+  .scrollbar::-webkit-scrollbar-thumb {
+    background: #FF4800;
+    border-radius: 100vh;
+    border: 3px solid #FF4800;
+  }
+
+  .scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #FF4800;
+  }
+}
+
 .changeimage:nth-of-type(1) {
     animation-delay: 4s;
 }
@@ -374,7 +396,7 @@ html { scroll-behavior: smooth;
   top:10%;
   transform: translateX(-50%);
   position: fixed;
-  background-color: #f6cfb1;
+  background-color:#FDB72C;
   width: 100%; /* Adjust the width as needed */
   height: 100%;
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
@@ -388,10 +410,6 @@ html { scroll-behavior: smooth;
   display: block;
   font-size: 32px;
   text-align: center;
-}
-
-.dropdown-content a:hover {
-  background-color: #f1f1f1;
 }
 
 .menu-container:hover .dropdown-content {
@@ -410,3 +428,13 @@ html { scroll-behavior: smooth;
 .show {
   display: block;
 }
+
+.selected {
+  background-color: #FF4800;
+  color: white;
+}
+#service-description {
+  overflow: hidden;
+}
+
+
