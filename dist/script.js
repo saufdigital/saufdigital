@@ -247,7 +247,7 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 function changeImage() {
-    var images = [ '../assets/cover1.png','../assets/cover2.png','../assets/cover3.png','../assets/cover4.png' , '../assets/cover5.png','../assets/cover6.png' , '../assets/cover7.png']; // Array of image sources
+    var images = [ '../assets/cover1.png','../assets/cover2.png','../assets/cover3.png','../assets/cover4.png' , '../assets/cover5.png' , '../assets/cover7.png']; // Array of image sources
     var currentIndex = 0; // Start index
     
     setInterval(function() {
@@ -321,8 +321,9 @@ $(document).ready(function() {
 document.addEventListener('DOMContentLoaded', () => {
     const services = document.querySelectorAll('.service');
     const descriptionDiv = document.getElementById('service-description');
+    
     const descriptionText = descriptionDiv.querySelector('p');
-    const descriptionHeading = descriptionDiv.querySelector('h2');
+    const descriptionHeading = descriptionDiv.querySelector('.scrolling-text');
 
     services.forEach(service => {
         service.addEventListener('click', () => {

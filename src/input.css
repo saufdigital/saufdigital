@@ -7,9 +7,9 @@ html { scroll-behavior: smooth;
  
 
 .tag {
-  opacity: 0;
+  opacity: 1;
   transform: translate(0, 10vh);
-  transition: all 2s;
+  transition: all 0.5s;
 }
 
 .tag.visible {
@@ -436,5 +436,34 @@ html { scroll-behavior: smooth;
 #service-description {
   overflow: hidden;
 }
+.scrolling-text-container {
+  position: relative;
+  height: 100%; /* Ensures it takes full height of its parent */
+  width: 100%;
+  display: flex;
+  align-items: flex-end; /* Aligns the span to the bottom */
+  box-sizing: border-box;
+  margin-top: 1rem; /* mt-4 */
+}
+
+.scrolling-text {
+  display: inline-block;
+  white-space: nowrap;
+  animation: scrollText 10s linear infinite;
+  font-size: 6rem; /* text-8xl */
+  font-weight: bold; /* font-bold */
+  text-transform: uppercase; /* uppercase */
+  color: white; /* text-white */
+  text-align: center; /* text-center */
+}
 
 
+@keyframes scrollText {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
