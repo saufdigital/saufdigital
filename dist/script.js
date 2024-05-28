@@ -214,37 +214,32 @@ $(document).on("scroll", function() {
         }
     });
 });
+let currentIndex = 0;
 
-document.addEventListener("DOMContentLoaded", function() {
-    // Function to move to the next element
-    function moveToNextElement() {
-        // Get the container element
-        const container = document.getElementById('listContainer');
-    
-        // Calculate the current scroll position
-        const currentPosition = container.scrollLeft;
-    
-        // Get the width of the container
-        const containerWidth = container.offsetWidth;
-    
-        // Find the index of the current visible element
-        const currentIndex = Math.floor(currentPosition / containerWidth);
-    
-        // Calculate the position to scroll to (next element)
-        const nextPosition = (currentIndex + 1) * containerWidth;
-        console.log(currentPosition)
-        console.log(nextPosition);
-    
-        // Scroll to the next position smoothly
-        container.scrollTo({
-            left: nextPosition,
-            behavior: 'smooth'
-        });
-    }
-    
-    // Automatically call moveToNextElement every 5 seconds
-    setInterval(moveToNextElement, 5000); // Adjust the interval as needed (in milliseconds)
-});
+function slideToNextItem() {
+  // Get the UL element
+  const ul = document.getElementById('listContainer');
+  
+  // Get all LI elements within the UL
+  const items = ul.querySelectorAll('li');
+  
+  if (items.length > 0) {
+    // Calculate the width of the first LI element (assuming all LI elements have the same width)
+    const itemWidth = items[0].offsetWidth;
+
+    // Calculate the new scroll position
+    const newPosition = (currentIndex * itemWidth) % (items.length * itemWidth);
+
+    // Scroll the UL to the new position
+    ul.scrollLeft = newPosition;
+
+    // Update the index to the next item
+    currentIndex = (currentIndex + 1) % items.length;
+  }
+}
+
+// Set an interval to automatically slide to the next item every 2 seconds
+setInterval(slideToNextItem, 5000);
 
 function changeImage() {
     var images = [ '../assets/cover1.png','../assets/cover2.png','../assets/cover3.png','../assets/cover4.png' , '../assets/cover5.png' , '../assets/cover7.png']; // Array of image sources
