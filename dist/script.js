@@ -1,3 +1,6 @@
+
+window.history.replaceState('','','/');
+
 document.addEventListener('DOMContentLoaded', function() {
     const slider = document.querySelector('.draggable');
     const items = slider.children;
