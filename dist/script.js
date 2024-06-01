@@ -1,6 +1,46 @@
 
 window.history.replaceState('','','/');
 
+const container = document.querySelector(".draggable");
+const cards = document.querySelector(".inner-draggable");
+
+/* keep track of user's mouse down and up */
+let isPressedDown = false;
+/* x horizontal space of cursor from inner container */
+let cursorXSpace;
+
+container.addEventListener("mousedown", (e) => {
+  isPressedDown = true;
+  cursorXSpace = e.offsetX - cards.offsetLeft;
+  container.style.cursor = "grabbing";
+});
+
+container.addEventListener("mouseup", () => {
+  container.style.cursor = "grab";
+});
+
+window.addEventListener("mouseup", () => {
+  isPressedDown = false;
+});
+
+container.addEventListener("mousemove", (e) => {
+  if (!isPressedDown) return;
+  e.preventDefault();
+  cards.style.left = `${e.offsetX - cursorXSpace}px`;
+  boundCards();
+});
+
+function boundCards() {
+  const container_rect = container.getBoundingClientRect();
+  const cards_rect = cards.getBoundingClientRect();
+
+  if (parseInt(cards.style.left) > 0) {
+    cards.style.left = 0;
+  } else if (cards_rect.right < container_rect.right) {
+    cards.style.left = `-${cards_rect.width - container_rect.width}px`;
+  }
+}
+
 document.addEventListener('DOMContentLoaded', function() {
     const slider = document.querySelector('.draggable');
     const items = slider.children;
@@ -25,126 +65,55 @@ document.addEventListener('DOMContentLoaded', function() {
         behavior: 'smooth'
     });
 
-    let mouseDown = false;
-    let startX, startScrollLeft;
+    let isDown = false;
+    let startX;
+    let scrollLeft;
 
-    const startDragging = (e) => {
-        mouseDown = true;
-        startX = e.pageX;
-        startScrollLeft = slider.scrollLeft;
-    }
-
-    const stopDragging = (e) => {
-        mouseDown = false;
-    }
-
-    const move = (e) => {
-        e.preventDefault();
-        if (!mouseDown) { return; }
-
-        const currentX = e.pageX;
-        const distance = currentX - startX;
-        const threshold = 5; // Adjust this threshold as needed
-
-        // Determine the direction of the swipe
-        const direction = distance < 0 ? 1 : -1;
-
-        // Check if the distance moved is greater than the threshold
-        if (Math.abs(distance) >= threshold) {
-            // Calculate the new scroll position based on the direction
-            const newScrollLeft = startScrollLeft + (slider.clientWidth * direction);
-
-            // Update the scroll position
-            slider.scrollTo({
-                left: newScrollLeft,
-                behavior: 'smooth' // Add smooth scrolling effect
-            });
-
-            // Reset mouseDown and startX to prevent continuous scrolling
-            mouseDown = false;
-            startX = currentX;
-        }
-    }
-
-    // Add the event listeners
-    slider.addEventListener('mousemove', move, false);
-    slider.addEventListener('mousedown', startDragging, false);
-    slider.addEventListener('mouseup', stopDragging, false);
-    slider.addEventListener('mouseleave', stopDragging, false);
-});
-
-document.addEventListener('DOMContentLoaded', function() {
-    const slider = document.querySelector('.draggable2');
-    const items = slider.children;
-    const middleIndex = Math.floor(items.length / 2);
-    const middleElement = items[middleIndex];
-
-    // Calculate the position of the middle of the ul
-    const ulMiddle = slider.offsetWidth / 2;
-
-    // Calculate the position of the middle of the middle element
-    const middleElementMiddle = middleElement.offsetLeft + middleElement.offsetWidth / 2;
-
-    // Calculate the initial scroll position to center the middle element
-    let initialScrollLeft = middleElementMiddle - ulMiddle;
-
-    // Make sure initialScrollLeft is within bounds
-    initialScrollLeft = Math.max(0, Math.min(initialScrollLeft, slider.scrollWidth - slider.offsetWidth));
-
-    // Scroll to the initial position
-    slider.scrollTo({
-        left: initialScrollLeft,
-        behavior: 'smooth'
+    slider.addEventListener('mousedown', (e) => {
+        isDown = true;
+        slider.classList.add('active');
+        startX = e.pageX - slider.offsetLeft;
+        scrollLeft = slider.scrollLeft;
     });
 
-    let mouseDown = false;
-    let startX, startScrollLeft;
+    slider.addEventListener('mouseleave', () => {
+        isDown = false;
+        slider.classList.remove('active');
+    });
 
-    const startDragging = (e) => {
-        mouseDown = true;
-        startX = e.pageX;
-        startScrollLeft = slider.scrollLeft;
-    }
+    slider.addEventListener('mouseup', () => {
+        isDown = false;
+        slider.classList.remove('active');
+    });
 
-    const stopDragging = (e) => {
-        mouseDown = false;
-    }
-
-    const move = (e) => {
+    slider.addEventListener('mousemove', (e) => {
+        if (!isDown) return;
         e.preventDefault();
-        if (!mouseDown) { return; }
+        const x = e.pageX - slider.offsetLeft;
+        const walk = (x - startX) * 3; //scroll-fast
+        slider.scrollLeft = scrollLeft - walk;
+    });
 
-        const currentX = e.pageX;
-        const distance = currentX - startX;
-        const threshold = 5; // Adjust this threshold as needed
+    // Touch events for mobile devices
+    slider.addEventListener('touchstart', (e) => {
+        isDown = true;
+        slider.classList.add('active');
+        startX = e.touches[0].pageX - slider.offsetLeft;
+        scrollLeft = slider.scrollLeft;
+    });
 
-        // Determine the direction of the swipe
-        const direction = distance < 0 ? 1 : -1;
+    slider.addEventListener('touchend', () => {
+        isDown = false;
+        slider.classList.remove('active');
+    });
 
-        // Check if the distance moved is greater than the threshold
-        if (Math.abs(distance) >= threshold) {
-            // Calculate the new scroll position based on the direction
-            const newScrollLeft = startScrollLeft + (slider.clientWidth * direction);
-
-            // Update the scroll position
-            slider.scrollTo({
-                left: newScrollLeft,
-                behavior: 'smooth' // Add smooth scrolling effect
-            });
-
-            // Reset mouseDown and startX to prevent continuous scrolling
-            mouseDown = false;
-            startX = currentX;
-        }
-    }
-
-    // Add the event listeners
-    slider.addEventListener('mousemove', move, false);
-    slider.addEventListener('mousedown', startDragging, false);
-    slider.addEventListener('mouseup', stopDragging, false);
-    slider.addEventListener('mouseleave', stopDragging, false);
+    slider.addEventListener('touchmove', (e) => {
+        if (!isDown) return;
+        const x = e.touches[0].pageX - slider.offsetLeft;
+        const walk = (x - startX) * 3; //scroll-fast
+        slider.scrollLeft = scrollLeft - walk;
+    });
 });
-
 
 document.addEventListener('DOMContentLoaded', function() {
     const carouselContainer = document.getElementById('carouselContainer');

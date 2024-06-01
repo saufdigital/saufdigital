@@ -5,6 +5,15 @@
 html { scroll-behavior: smooth;
  }
  
+ .draggable.active {
+  cursor: grabbing;
+  cursor: -webkit-grabbing;
+}
+.draggable {
+  cursor: grab;
+  cursor: -webkit-grab;
+}
+
 
 .tag {
   opacity: 1;
@@ -25,19 +34,19 @@ html { scroll-behavior: smooth;
 @layer base {
 @font-face{
   font-family: 'HELVETICA';
-  src: url('../fonts/Helvetica.ttf')
+  src: url('./fonts/Helvetica.ttf')
 }
 @font-face{
   font-family: 'COUTURE';
-  src: url('../fonts/couture-bld.otf')
+  src: url('./fonts/couture-bld.otf')
 }
 @font-face{
   font-family: 'HELVETICA-LIGHT';
-  src: url('../fonts/helvetica-light-587ebe5a59211.ttf')
+  src: url('./fonts/helvetica-light-587ebe5a59211.ttf')
 }
 @font-face{
   font-family: 'RECOLETA';
-  src: url('../fonts/Recoleta-RegularDEMO.otf')
+  src: url('./fonts/Recoleta-RegularDEMO.otf')
 }
 }
 @layer utilities {
@@ -308,60 +317,7 @@ html { scroll-behavior: smooth;
   bottom: 0px; /* Adjust the bottom distance as needed */
   transition: transform 0.3s ease-in-out, color 0.3s ease-in-out; /* Transition for heading */
 }
-#myImg1 {
-  position: absolute;
-  right: 40%;
-  top: 10%;
-  width: 40%;
-  height: 40%;
-  border-radius: 10%;
-  background-image: url("../assets/animatedgif.gif");
-  background-size: cover;
-  background-position: center;
-  z-index: 1;
-  display: none; /* Hide initially */
-}
-#myImg2 {
-  position: absolute;
-  right: 40%;
-  top: 10%;
-  width: 40%;
-  height: 40%;
-  border-radius: 10%;
-  background-image: url("../assets/giphy2.gif");
-  background-size: cover;
-  background-position: center;
-  z-index: 1;
-  display: none; /* Hide initially */
-}
 
-#myImg3 {
-  position: absolute;
-  right: 40%;
-  top: 10%;
-  width: 40%;
-  height: 40%;
-  border-radius: 10%;
-  background-image: url("../assets/giphy3.gif");
-  background-size: cover;
-  background-position: center;
-  z-index: 1;
-  display: none; /* Hide initially */
-}
-
-#myImg5 {
-  position: absolute;
-  right: 40%;
-  top: 10%;
-  width: 40%;
-  height: 40%;
-  border-radius: 10%;
-  background-image: url("../assets/giphy5.gif");
-  background-size: cover;
-  background-position: center;
-  z-index: 1;
-  display: none; /* Hide initially */
-}
 .description {
   padding-left: 20px;
   padding-right: 10px;
