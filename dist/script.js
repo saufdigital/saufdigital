@@ -1,87 +1,87 @@
 
 window.history.replaceState('','','/');
-// const slider = document.querySelector('.draggable');
-// let isDown = false;
-// let startX;
-// let scrollLeft;
+const slider = document.querySelector('.draggable');
+let isDown = false;
+let startX;
+let scrollLeft;
 
-// slider.addEventListener('mousedown', (e) => {
-//     isDown = true;
-//     slider.classList.add('active');
-//     startX = e.pageX - slider.offsetLeft;
-//     scrollLeft = slider.scrollLeft;
+slider.addEventListener('mousedown', (e) => {
+    isDown = true;
+    slider.classList.add('active');
+    startX = e.pageX - slider.offsetLeft;
+    scrollLeft = slider.scrollLeft;
+});
+
+slider.addEventListener('mouseleave', () => {
+    isDown = false;
+    slider.classList.remove('active');
+});
+
+slider.addEventListener('mouseup', () => {
+    isDown = false;
+    slider.classList.remove('active');
+});
+
+slider.addEventListener('mousemove', (e) => {
+    if (!isDown) return;
+    e.preventDefault();
+    const x = e.pageX - slider.offsetLeft;
+    const walk = (x - startX) * 3; //scroll-fast
+    slider.scrollLeft = scrollLeft - walk;
+});
+
+
+// let slider = document.querySelector(".slider");
+// let innerSlider = document.querySelector(".slider-inner");
+
+// let pressed = false;
+// let startx;
+// let x;
+
+// slider.addEventListener("mousedown", (e) => {
+//   pressed = true;
+//   startx = e.offsetX - innerSlider.offsetLeft;
+//   console.log(
+//     `OffsetX: ${e.offsetX}, InnerSlider OffsetLeft: ${innerSlider.offsetLeft}`
+//   );
+//   slider.style.cursor = "grabbing";
 // });
 
-// slider.addEventListener('mouseleave', () => {
-//     isDown = false;
-//     slider.classList.remove('active');
+// slider.addEventListener("mouseenter", () => {
+//   slider.style.cursor = "grab";
 // });
 
-// slider.addEventListener('mouseup', () => {
-//     isDown = false;
-//     slider.classList.remove('active');
+// slider.addEventListener("mouseup", () => {
+//   slider.style.cursor = "grab";
 // });
 
-// slider.addEventListener('mousemove', (e) => {
-//     if (!isDown) return;
-//     e.preventDefault();
-//     const x = e.pageX - slider.offsetLeft;
-//     const walk = (x - startX) * 3; //scroll-fast
-//     slider.scrollLeft = scrollLeft - walk;
+// window.addEventListener("mouseup", () => {
+//   pressed = false;
 // });
 
+// slider.addEventListener("mousemove", (e) => {
+//   if (!pressed) return;
+//   e.preventDefault();
 
-let slider = document.querySelector(".slider");
-let innerSlider = document.querySelector(".slider-inner");
+//   x = e.offsetX;
+//   console.log(`x: ${x}, startx: ${startx}`);
+//   console.log(`Diff: ${x - startx}`);
 
-let pressed = false;
-let startx;
-let x;
+//   innerSlider.style.left = `${x - startx}px`;
+//   checkBoundary();
+// });
 
-slider.addEventListener("mousedown", (e) => {
-  pressed = true;
-  startx = e.offsetX - innerSlider.offsetLeft;
-  console.log(
-    `OffsetX: ${e.offsetX}, InnerSlider OffsetLeft: ${innerSlider.offsetLeft}`
-  );
-  slider.style.cursor = "grabbing";
-});
+// function checkBoundary(x, startx) {
+//   let outer = slider.getBoundingClientRect();
+//   let inner = innerSlider.getBoundingClientRect();
 
-slider.addEventListener("mouseenter", () => {
-  slider.style.cursor = "grab";
-});
-
-slider.addEventListener("mouseup", () => {
-  slider.style.cursor = "grab";
-});
-
-window.addEventListener("mouseup", () => {
-  pressed = false;
-});
-
-slider.addEventListener("mousemove", (e) => {
-  if (!pressed) return;
-  e.preventDefault();
-
-  x = e.offsetX;
-  console.log(`x: ${x}, startx: ${startx}`);
-  console.log(`Diff: ${x - startx}`);
-
-  innerSlider.style.left = `${x - startx}px`;
-  checkBoundary();
-});
-
-function checkBoundary(x, startx) {
-  let outer = slider.getBoundingClientRect();
-  let inner = innerSlider.getBoundingClientRect();
-
-  if (parseInt(innerSlider.style.left) > 0) {
-    innerSlider.style.left = "0px";
-  }
-  if (inner.right < outer.right) {
-    innerSlider.style.left = `-${inner.width - outer.width}px`;
-  }
-}
+//   if (parseInt(innerSlider.style.left) > 0) {
+//     innerSlider.style.left = "0px";
+//   }
+//   if (inner.right < outer.right) {
+//     innerSlider.style.left = `-${inner.width - outer.width}px`;
+//   }
+// }
 
 $(document).on("scroll", function() {
     var pageTop = $(document).scrollTop();
