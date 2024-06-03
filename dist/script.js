@@ -1,147 +1,37 @@
 
 window.history.replaceState('','','/');
 
-const container = document.querySelector(".draggable");
-const cards = document.querySelector(".inner-draggable");
+const slider = document.querySelector('.draggable');
+let isDown = false;
+let startX;
+let scrollLeft;
 
-/* keep track of user's mouse down and up */
-let isPressedDown = false;
-/* x horizontal space of cursor from inner container */
-let cursorXSpace;
-
-container.addEventListener("mousedown", (e) => {
-  isPressedDown = true;
-  cursorXSpace = e.offsetX - cards.offsetLeft;
-  container.style.cursor = "grabbing";
+slider.addEventListener('mousedown', (e) => {
+    isDown = true;
+    slider.classList.add('active');
+    startX = e.pageX - slider.offsetLeft;
+    scrollLeft = slider.scrollLeft;
 });
 
-container.addEventListener("mouseup", () => {
-  container.style.cursor = "grab";
+slider.addEventListener('mouseleave', () => {
+    isDown = false;
+    slider.classList.remove('active');
 });
 
-window.addEventListener("mouseup", () => {
-  isPressedDown = false;
+slider.addEventListener('mouseup', () => {
+    isDown = false;
+    slider.classList.remove('active');
 });
 
-container.addEventListener("mousemove", (e) => {
-  if (!isPressedDown) return;
-  e.preventDefault();
-  cards.style.left = `${e.offsetX - cursorXSpace}px`;
-  boundCards();
+slider.addEventListener('mousemove', (e) => {
+    if(!isDown) return;
+    e.preventDefault();
+    const x = e.pageX - slider.offsetLeft;
+    const walk = (x - startX) * 3; //scroll-fast
+    slider.scrollLeft = scrollLeft - walk;
 });
 
-function boundCards() {
-  const container_rect = container.getBoundingClientRect();
-  const cards_rect = cards.getBoundingClientRect();
 
-  if (parseInt(cards.style.left) > 0) {
-    cards.style.left = 0;
-  } else if (cards_rect.right < container_rect.right) {
-    cards.style.left = `-${cards_rect.width - container_rect.width}px`;
-  }
-}
-
-document.addEventListener('DOMContentLoaded', function() {
-    const slider = document.querySelector('.draggable');
-    const items = slider.children;
-    const middleIndex = Math.floor(items.length / 2);
-    const middleElement = items[middleIndex];
-
-    // Calculate the position of the middle of the ul
-    const ulMiddle = slider.offsetWidth / 2;
-
-    // Calculate the position of the middle of the middle element
-    const middleElementMiddle = middleElement.offsetLeft + middleElement.offsetWidth / 2;
-
-    // Calculate the initial scroll position to center the middle element
-    let initialScrollLeft = middleElementMiddle - ulMiddle;
-
-    // Make sure initialScrollLeft is within bounds
-    initialScrollLeft = Math.max(0, Math.min(initialScrollLeft, slider.scrollWidth - slider.offsetWidth));
-
-    // Scroll to the initial position
-    slider.scrollTo({
-        left: initialScrollLeft,
-        behavior: 'smooth'
-    });
-
-    let isDown = false;
-    let startX;
-    let scrollLeft;
-
-    slider.addEventListener('mousedown', (e) => {
-        isDown = true;
-        slider.classList.add('active');
-        startX = e.pageX - slider.offsetLeft;
-        scrollLeft = slider.scrollLeft;
-    });
-
-    slider.addEventListener('mouseleave', () => {
-        isDown = false;
-        slider.classList.remove('active');
-    });
-
-    slider.addEventListener('mouseup', () => {
-        isDown = false;
-        slider.classList.remove('active');
-    });
-
-    slider.addEventListener('mousemove', (e) => {
-        if (!isDown) return;
-        e.preventDefault();
-        const x = e.pageX - slider.offsetLeft;
-        const walk = (x - startX) * 3; //scroll-fast
-        slider.scrollLeft = scrollLeft - walk;
-    });
-
-    // Touch events for mobile devices
-    slider.addEventListener('touchstart', (e) => {
-        isDown = true;
-        slider.classList.add('active');
-        startX = e.touches[0].pageX - slider.offsetLeft;
-        scrollLeft = slider.scrollLeft;
-    });
-
-    slider.addEventListener('touchend', () => {
-        isDown = false;
-        slider.classList.remove('active');
-    });
-
-    slider.addEventListener('touchmove', (e) => {
-        if (!isDown) return;
-        const x = e.touches[0].pageX - slider.offsetLeft;
-        const walk = (x - startX) * 3; //scroll-fast
-        slider.scrollLeft = scrollLeft - walk;
-    });
-});
-
-document.addEventListener('DOMContentLoaded', function() {
-    const carouselContainer = document.getElementById('carouselContainer');
-    const items = carouselContainer.children;
-    const firstItem = items[0].cloneNode(true);
-    const lastItem = items[items.length - 1].cloneNode(true);
-
-    carouselContainer.appendChild(firstItem); // Add a copy of the first item to the end
-    carouselContainer.insertBefore(lastItem, items[0]); // Insert a copy of the last item at the beginning
-
-    // Scroll event listener
-    carouselContainer.addEventListener('scroll', function() {
-        // Check if scroll reaches the end
-        if (carouselContainer.scrollLeft + carouselContainer.clientWidth >= carouselContainer.scrollWidth) {
-            // Move the first item to the end
-            carouselContainer.appendChild(items[0].cloneNode(true));
-            // Reset the scroll position to maintain the illusion of continuity
-            carouselContainer.scrollLeft = 0;
-        }
-        // Check if scroll reaches the beginning
-        else if (carouselContainer.scrollLeft === 0) {
-            // Move the last item to the beginning
-            carouselContainer.insertBefore(items[items.length - 1].cloneNode(true), items[0]);
-            // Adjust the scroll position to maintain the illusion of continuity
-            carouselContainer.scrollLeft = items[1].offsetLeft;
-        }
-    });
-});
 $(document).on("scroll", function() {
     var pageTop = $(document).scrollTop();
     var pageBottom = pageTop + $(window).height();
