@@ -12,6 +12,9 @@ module.exports = {
         'pos-0': '0% 0%',
         'pos-100': '100% 100%',
       },
+      cursor: {
+        'fancy': 'url(../dist/assets/hand.png), pointer',
+      },
       fontFamily:{
         poppins : "'Poppins' , sans-serif",
         dmsans : "'DM Sans' , sans-serif",
