@@ -1757,12 +1757,12 @@ html {
 }
 
 .draggable.active {
-  cursor: grabbing;
+  cursor: url('../dist/assets/hand.png'), auto;
   cursor: -webkit-grabbing;
 }
 
 .draggable {
-  cursor: grab;
+  cursor: url('../dist/assets/hand.png'), auto;
   cursor: -webkit-grab;
 }
 
