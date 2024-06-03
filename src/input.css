@@ -6,11 +6,11 @@ html { scroll-behavior: smooth;
  }
  
  .draggable.active {
-  cursor: url('../dist/assets/hand.png'), auto;
+  cursor: url('assets/hand.png'), auto;
   cursor: -webkit-grabbing;
 }
 .draggable {
-  cursor: url('../dist/assets/hand.png'), auto;
+  cursor: url('assets/hand.png'), auto;
   cursor: -webkit-grab;
 }
 
