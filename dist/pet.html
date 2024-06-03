@@ -14,39 +14,40 @@
 
 </head>
 <body class=" tablet:mx-[60px] font-helvetica bg-[#Fafafa] overflow-x-hidden p-4">
-    <header class="flex justify-between py-4 laptop:items-end items-center mt-4 bg-inherit">
-        <div class="w-[130px] h-[40px] ml-[20px] laptop:ml-[12px] laptop:w-[173.72px] h-[56.49px] ">
-            <a href="./index.html">
-                <img src="assets/saufdigitallogo.png" alt=""></a>    
-        </div>
-        <div class="tablet:hidden menu-container">
-           <button class="menu-button"><img src="assets/more.png" alt="" class="w-6 h-6"></button>
-           <div class="dropdown-content font-recoleta font-bold">
-              <a href="./about.html">About</a>
-              <a href="#work">Work</a>
-              <a href="#contact">Contact</a>
-              <a href="#blog">Blog</a>
-              <a href="" class="mt-12">
-                 <button href="#_" class="relative inline-flex items-center justify-center p-4 px-8 py-3 overflow-hidden font-medium text-black transition duration-300 ease-out border-2 border-sauforange rounded-full shadow-md group">
-                    <span class="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-sauforange group-hover:translate-x-0 ease">
-                       <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-                       </svg>
-                    </span>
-                    <span class="absolute flex items-center justify-center w-full h-full text-sauforange transition-all duration-300 transform group-hover:translate-x-full ease">Start a Project</span>
-                    <span class="relative invisible">Start a Project</span>
-                 </button>
-              </a>
-           </div>
-        </div>
-        <div class="relative max-tablet:hidden grid grid-cols-4 gap-x-4 font-bold ">
-           <button class="navbutton" > <a href="./about.html">About</a></button>
-           <button class="navbutton"><a href="#work">Work</a> </button>
-           <button class="navbutton "><a href="#contact">Contact</a> </button>
-           <button class="navbutton "><a href="#blogs">Blog</a></button>
-        </div>
-     </header>
-    
+   <header class="flex justify-between py-4 laptop:items-end items-center mt-4 bg-inherit">
+      <div class="w-[130px] h-[40px] ml-[20px] laptop:ml-[12px] laptop:w-[173.72px] h-[56.49px] ">
+         <a href="./index.html">
+         <img src="assets/saufdigitallogo.png" alt="" > </a>
+      </div>
+      <div class="tablet:hidden menu-container">
+         <button class="menu-button"><img src="assets/more.png" alt="" class="w-6 h-6"></button>
+         <div id="dropdown-content" class="dropdown-content font-recoleta font-bold w-full  ">
+            <a href="./about.html">About</a>
+            <a href="./index.html#work">Work</a>
+            <a href="./index.html#services">Services</a>
+            <a href="./index.html#contact">Contact</a>
+            <a href="./index.html#blog">Blog</a>
+            <a href="./index.html#contact" class="mt-12">
+               <button href="#contact" class="relative inline-flex items-center justify-center p-4 px-8 py-3 overflow-hidden font-medium text-black transition duration-300 ease-out border-2 border-sauforange rounded-full shadow-md group">
+                  <span class="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-sauforange group-hover:translate-x-0 ease">
+                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                     </svg>
+                  </span>
+                  <span class="absolute flex items-center justify-center w-full h-full text-sauforange transition-all duration-300 transform group-hover:translate-x-full ease">Start a Project</span>
+                  <span class="relative invisible">Start a Project</span>
+               </button>
+            </a>
+         </div>
+      </div>
+      <div class="relative max-tablet:hidden grid grid-cols-5 gap-x-4 font-bold ">
+         <button class="navbutton" > <a href="./about.html">About</a></button>
+         <button class="navbutton"><a href="./index.html#work">Work</a> </button>
+         <button class="navbutton"><a href="./index.html#services">Services</a> </button>
+         <button class="navbutton "><a href="./index.html#contact">Contact</a> </button>
+         <button class="navbutton "><a href="./index.html#blogs">Blog</a></button>
+      </div>
+   </header>    
 </div>
 <div class="border-t border-orange-600 mx-2" id="line"></div>
 
