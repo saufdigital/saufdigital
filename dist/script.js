@@ -69,6 +69,7 @@ slider.addEventListener("mousemove", (e) => {
 
   innerSlider.style.left = `${x - startx}px`;
   checkBoundary();
+  pressed=false
 });
 
 function checkBoundary(x, startx) {
